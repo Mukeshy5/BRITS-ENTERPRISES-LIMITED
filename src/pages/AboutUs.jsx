@@ -104,10 +104,10 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="bg-[#DAF1DE] p-12 rounded-3xl text-[#235347] border border-[#235347]/10 relative overflow-hidden group hover:shadow-2xl transition-all duration-500">
+            <div className="bg-[#235347] p-12 rounded-3xl text-[#DAF1DE] border border-black/10 relative overflow-hidden group hover:shadow-2xl transition-all duration-500">
               <div className="absolute top-[-20px] right-[-20px] text-9xl text-white/5 font-serif group-hover:scale-110 transition-transform duration-700">V</div>
-              <h3 className="text-[#235347] text-3xl font-bold mb-6">Our Vision</h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <h3 className="text-white text-3xl font-bold mb-6">Our Vision</h3>
+              <p className="text-[#DAF1DE]/80 text-lg leading-relaxed">
                 To become a global benchmark for multi-sector business excellence, where every product delivered and every service rendered contributes to a more connected and sophisticated world.
               </p>
             </div>

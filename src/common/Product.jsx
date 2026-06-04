@@ -136,10 +136,10 @@ const Product = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Page Header */}
-      <header className="bg-[#DAF1DE] text-[#235347] py-20">
+      <header className="bg-[#235347] text-[#DAF1DE] py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#235347] mb-4">Our Products & Services</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto font-medium">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Products & Services</h1>
+          <p className="text-[#DAF1DE]/80 max-w-2xl mx-auto font-medium">
             Delivering excellence across the world through our diverse range of premium products and specialized global services.
           </p>
         </div>

@@ -15,17 +15,17 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path
 
   return (
-    <nav className="bg-[#DAF1DE]/90 backdrop-blur-md text-[#235347] sticky top-0 z-50 shadow-xl border-b border-[#235347]/10">
+    <nav className="bg-white/95 backdrop-blur-md text-[#235347] sticky top-0 z-50 shadow-sm border-b border-[#235347]/10">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Brand */}
           <Link to="/" className="flex items-center gap-2 md:gap-3 group">
             <div className="flex flex-col justify-center">
-              <h2 className="text-[#235347] text-sm md:text-xl font-bold leading-none tracking-tighter uppercase group-hover:text-black transition-colors duration-300">
+              <h2 className="text-black text-sm md:text-xl font-bold leading-none tracking-tighter uppercase group-hover:text-[#235347] transition-colors duration-300">
                 BRITS
               </h2>
-              <span className="text-gray-700 text-[8px] md:text-[10px] font-bold tracking-[0.2em] uppercase leading-none mt-1">
-                Enterprises <span className="text-[#235347]">Ltd</span>
+              <span className="text-[#235347] text-[8px] md:text-[10px] font-bold tracking-[0.2em] uppercase leading-none mt-1">
+                Enterprises <span className="text-[#8EB69B]">Ltd</span>
               </span>
              
             </div>
@@ -38,10 +38,10 @@ const Navbar = () => {
                 <Link 
                   to={link.path}
                   className={`relative inline-block text-[13px] font-bold tracking-widest transition-all duration-300 pb-1 hover:scale-105
-                    ${isActive(link.path) ? 'text-[#235347]' : 'text-gray-600 hover:text-[#235347]'}`}
+                    ${isActive(link.path) ? 'text-black' : 'text-[#235347] hover:text-black'}`}
                 >
                   {link.name}
-                  <span className={`absolute left-0 -bottom-1 h-[2px] bg-[#235347] transition-all duration-300 ${isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                  <span className={`absolute left-0 -bottom-1 h-[2px] bg-[#8EB69B] transition-all duration-300 ${isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                 </Link>
               </li>
             ))}
@@ -50,7 +50,7 @@ const Navbar = () => {
           {/* Actions */}
           <div className="flex items-center gap-6">
             <Link to="/request-quote" className="hidden sm:block">
-              <button className="bg-[#235347] hover:bg-[#8EB69B] text-white px-8 py-2.5 rounded-lg font-bold text-[11px] tracking-widest transition-all duration-300 shadow-lg hover:shadow-[#235347]/20 hover:-translate-y-0.5 uppercase">
+              <button className="bg-[#235347] hover:bg-black text-white px-8 py-2.5 rounded-lg font-bold text-[11px] tracking-widest transition-all duration-300 shadow-lg hover:shadow-[#235347]/20 hover:-translate-y-0.5 uppercase">
                 ENQUIRE NOW
               </button>
             </Link>
