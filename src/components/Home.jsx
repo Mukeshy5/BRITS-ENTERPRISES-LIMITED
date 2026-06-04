@@ -18,20 +18,20 @@ const Home = () => {
             />
           </picture>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#DAF1DE] via-[#DAF1DE]/90 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#235347] via-[#235347]/90 to-transparent" />
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 flex-1 flex items-center">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-20">
             <div className="max-w-3xl">
-              <p className="text-[#235347] text-xs sm:text-sm mb-4 font-bold uppercase tracking-[0.3em]">
+              <p className="text-[#DAF1DE] text-xs sm:text-sm mb-4 font-bold uppercase tracking-[0.3em]">
                 Company No.: 14985907
               </p>
 
               <h1
                 className="
-            text-[#235347]
+            text-[#DAF1DE]
             font-bold
             leading-tight
             break-words
@@ -47,11 +47,11 @@ const Home = () => {
                 LIMITED
               </h1>
 
-              <div className="w-20 h-[3px] bg-[#235347] my-6 sm:my-8"></div>
+              <div className="w-20 h-[3px] bg-[#8EB69B] my-6 sm:my-8"></div>
 
               <p
                 className="
-            text-gray-700
+            text-[#DAF1DE]/80
             leading-relaxed
             max-w-xl
             mb-8
@@ -68,13 +68,13 @@ const Home = () => {
                 <a
                   href="#business"
                   className="
-              bg-[#DAF1DE]
-              text-[#235347]
+              bg-[#8EB69B]
+              text-black
               font-bold
               px-8
               py-4
               rounded-xl
-              hover:bg-[#235347] hover:text-white
+              hover:bg-[#DAF1DE] hover:text-[#235347]
               transition-all duration-300
               text-center
               w-full
@@ -89,14 +89,14 @@ const Home = () => {
                 <Link
                   to="/contact"
                   className="
-              border
-              border-[#235347]
-              text-[#235347]
+              border-2
+              border-[#8EB69B]
+              text-[#DAF1DE]
               px-8
               py-4
               rounded-xl
-              hover:bg-[#235347]
-              hover:text-white
+              hover:bg-[#8EB69B]
+              hover:text-black
               transition-all duration-300
               text-center
               w-full
@@ -113,14 +113,14 @@ const Home = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="relative z-20 bg-[#DAF1DE]/95 border-t border-[#235347]/10">
+        <div className="relative z-20 bg-[#235347]/95 border-t border-[#8EB69B]/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 text-center">
-            <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-3xl mx-auto font-medium">
+            <p className="text-[#DAF1DE] text-sm md:text-base leading-relaxed max-w-3xl mx-auto font-medium">
               BRITS ENTERPRISES LIMITED is a UK-registered global business specializing in multi-sector solutions including Aviation, Logistics, Premium Lifestyle Products, and Interior Finishes.
               We are committed to delivering excellence and building lasting value for our clients worldwide.
             </p>
             <div className="flex justify-center mt-4">
-              <Link to="/about" className="text-[#235347] hover:text-black transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">
+              <Link to="/about" className="text-[#8EB69B] hover:text-white transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">
                 Learn More About Us →
               </Link>
             </div>
@@ -128,12 +128,12 @@ const Home = () => {
         </div>
       </section>
       {/* Business Section */}
-      <section className="py-24 bg-white" id="business">
+      <section className="py-24 bg-[#DAF1DE]" id="business">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4 mb-8 lg:mb-0">
               <span className="text-[#235347] text-xs font-bold uppercase tracking-[0.3em] block mb-4">Our Expertise</span>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#235347]">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-black">
                 Delivering Value Across The World
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
@@ -141,7 +141,7 @@ const Home = () => {
               </p>
               <Link
                 to="/products"
-                className="inline-block bg-[#235347] text-[#DAF1DE] px-10 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-300 shadow-xl"
+                className="inline-block bg-[#235347] text-[#DAF1DE] px-10 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-[#8EB69B] hover:text-black transition-all duration-300 shadow-xl"
               >
                 View Catalog
               </Link>
@@ -158,7 +158,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-[#235347]">
+                  <h3 className="text-xl font-bold mb-3 text-black">
                     Freight Air Transport
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -177,7 +177,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-[#235347]">
+                  <h3 className="text-xl font-bold mb-3 text-black">
                     Tote Bags / Shopping Bags
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -196,7 +196,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-[#235347]">
+                  <h3 className="text-xl font-bold mb-3 text-black">
                     Jewellery Box / Gift Boxes
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -215,7 +215,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-[#235347]">
+                  <h3 className="text-xl font-bold mb-3 text-black">
                     Interior Decorative Painting
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -229,13 +229,13 @@ const Home = () => {
       </section>
 
       {/* Aviation & Airport Services Section */}
-      <section className="py-16 md:py-4 bg-[#DAF1DE]/10">
+      <section className="py-16 md:py-4 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
             <span className="text-[#235347] text-xs font-bold uppercase tracking-widest block mb-3">
               Logistics Excellence
             </span>
-            <h2 className="text-black text-3xl md:text-5xl font-bold leading-tight">
+            <h2 className="text-[#235347] text-3xl md:text-5xl font-bold leading-tight">
               Aviation & Airport Solutions
             </h2>
             <div className="w-20 h-1 bg-[#8EB69B] mt-6"></div>
@@ -253,7 +253,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-[#235347]">
+                <h3 className="text-2xl font-semibold mb-3 text-black">
                   Ground Handling
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -274,7 +274,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-[#235347]">
+                <h3 className="text-2xl font-semibold mb-3 text-black">
                   Cargo Charters
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -295,7 +295,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-[#235347]">
+                <h3 className="text-2xl font-semibold mb-3 text-black">
                   Secure Warehousing
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -316,7 +316,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-[#235347]">
+                <h3 className="text-2xl font-semibold mb-3 text-black">
                   Global Logistics
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -330,7 +330,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-[#DAF1DE] text-[#235347] relative overflow-hidden font-sans">
+      <section className="py-16 md:py-24 bg-[#235347] text-[#DAF1DE] relative overflow-hidden font-sans">
         {/* Background Overlay */}
         <div
           className="absolute inset-0 opacity-10 grayscale pointer-events-none"
@@ -341,7 +341,7 @@ const Home = () => {
             backgroundPosition: "center",
           }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#DAF1DE]/90 via-[#DAF1DE] to-[#DAF1DE]/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#235347]/90 via-[#235347] to-[#235347]/95"></div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
@@ -350,7 +350,7 @@ const Home = () => {
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
               Quality. Reliability.{" "}
-              <span className="text-[#235347]">Global Reach.</span>
+              <span className="text-[#DAF1DE]">Global Reach.</span>
             </h2>
             <div className="w-20 h-1 bg-[#235347] mx-auto"></div>
           </div>
@@ -385,15 +385,15 @@ const Home = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="group bg-[#235347]/5 border border-[#235347]/10 p-8 rounded-2xl hover:bg-white hover:border-[#235347]/50 transition-all duration-500 text-center flex flex-col items-center"
+                className="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-[#8EB69B]/50 transition-all duration-500 text-center flex flex-col items-center"
               >
-                <div className="w-16 h-16 bg-[#235347]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#235347] transition-all duration-500 shadow-xl">
+                <div className="w-16 h-16 bg-[#8EB69B]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#8EB69B]/20 transition-all duration-500 shadow-xl">
                   <span className="text-3xl">{item.icon}</span>
                 </div>
-                <h4 className="text-[#235347] text-[13px] font-bold uppercase tracking-widest mb-3">
+                <h4 className="text-[#DAF1DE] text-[13px] font-bold uppercase tracking-widest mb-3">
                   {item.title}
                 </h4>
-                <p className="text-gray-600 text-xs leading-relaxed font-medium">
+                <p className="text-gray-400 text-xs leading-relaxed font-medium">
                   {item.desc}
                 </p>
               </div>
