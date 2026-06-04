@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/logo.png'
 
 const Footer = () => {
   return (
@@ -10,8 +9,15 @@ const Footer = () => {
           
           {/* Brand & Socials Section */}
           <div className="md:col-span-1 space-y-6">
-            <Link to="/" className="inline-block transform hover:scale-105 transition-transform">
-              <img src={logo} alt="BRITS" className="h-16 w-auto object-contain" />
+            <Link to="/" className="inline-block group">
+              <div className="flex flex-col justify-center">
+                <h2 className="text-[#d7b17c] text-xl font-bold leading-none tracking-tighter uppercase font-serif group-hover:text-white transition-colors duration-300">
+                  BRITS
+                </h2>
+                <span className="text-gray-400 text-[10px] font-bold tracking-[0.2em] uppercase leading-none mt-1">
+                  Enterprises <span className="text-[#d7b17c]">Ltd</span>
+                </span>
+              </div>
             </Link>
             <div className="flex gap-4">
               {['facebook-f', 'instagram', 'linkedin-in'].map((icon, i) => (
@@ -25,20 +31,50 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="md:col-span-1">
             <h4 className="text-[#d7b17c] text-xs font-bold uppercase tracking-[0.3em] mb-6">Company</h4>
-            <ul className="space-y-3 text-[13px] text-gray-400">
-              <li><Link to="/" className="hover:text-white transition-colors">Home Landing</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors">About Story</Link></li>
-              <li><Link to="/products" className="hover:text-white transition-colors">Our Products</Link></li>
+            <ul className="space-y-4 text-[13px] text-gray-400">
+              <li className="group w-fit">
+                <Link to="/" className="hover:text-white transition-colors relative pb-1">
+                  Home Landing
+                  <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-[#d7b17c] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+              <li className="group w-fit">
+                <Link to="/about" className="hover:text-white transition-colors relative pb-1">
+                  About Story
+                  <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-[#d7b17c] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+              <li className="group w-fit">
+                <Link to="/products" className="hover:text-white transition-colors relative pb-1">
+                  Our Products
+                  <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-[#d7b17c] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Support Links */}
           <div className="md:col-span-1">
             <h4 className="text-[#d7b17c] text-xs font-bold uppercase tracking-[0.3em] mb-6">Support</h4>
-            <ul className="space-y-3 text-[13px] text-gray-400">
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
-              <li><Link to="/request-quote" className="hover:text-white transition-colors">Get A Quote</Link></li>
-              <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+            <ul className="space-y-4 text-[13px] text-gray-400">
+              <li className="group w-fit">
+                <Link to="/contact" className="hover:text-white transition-colors relative pb-1">
+                  Contact Us
+                  <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-[#d7b17c] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+              <li className="group w-fit">
+                <Link to="/request-quote" className="hover:text-white transition-colors relative pb-1">
+                  Get A Quote
+                  <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-[#d7b17c] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+              <li className="group w-fit">
+                <Link to="/privacy" className="hover:text-white transition-colors relative pb-1">
+                  Privacy Policy
+                  <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-[#d7b17c] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
             </ul>
           </div>
 

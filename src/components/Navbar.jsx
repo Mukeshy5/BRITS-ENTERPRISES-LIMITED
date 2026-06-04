@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import logo from '../assets/logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,17 +15,12 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path
 
   return (
-    <nav className="bg-[#061A2F] text-white sticky top-0 z-50 shadow-xl border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-2">
+    <nav className="bg-[#061A2F]/95 backdrop-blur-md text-white sticky top-0 z-50 shadow-2xl border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Brand */}
           <Link to="/" className="flex items-center gap-2 md:gap-3 group">
-            <img 
-              src={logo} 
-              alt="BRITS ENTERPRISES LIMITED" 
-              className="h-10 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="flex flex-col justify-center border-l border-white/10 pl-2 md:pl-3">
+            <div className="flex flex-col justify-center">
               <h2 className="text-[#d7b17c] text-sm md:text-xl font-bold leading-none tracking-tighter uppercase font-serif group-hover:text-white transition-colors duration-300">
                 BRITS
               </h2>
@@ -40,13 +34,14 @@ const Navbar = () => {
           {/* Desktop Nav */}
           <ul className="hidden lg:flex gap-10">
             {navLinks.map((link) => (
-              <li key={link.path}>
+              <li key={link.path} className="group">
                 <Link 
                   to={link.path}
-                  className={`text-[13px] font-bold tracking-widest transition duration-300 hover:text-[#d7b17c]
-                    ${isActive(link.path) ? 'text-[#d7b17c]' : 'text-gray-300'}`}
+                  className={`relative inline-block text-[13px] font-bold tracking-widest transition-all duration-300 pb-1 hover:scale-105
+                    ${isActive(link.path) ? 'text-[#d7b17c]' : 'text-gray-300 hover:text-[#d7b17c]'}`}
                 >
                   {link.name}
+                  <span className={`absolute left-0 -bottom-1 h-[2px] bg-[#d7b17c] transition-all duration-300 ${isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                 </Link>
               </li>
             ))}
@@ -55,7 +50,7 @@ const Navbar = () => {
           {/* Actions */}
           <div className="flex items-center gap-6">
             <Link to="/request-quote" className="hidden sm:block">
-              <button className="bg-[#d7b17c] hover:bg-white text-black px-6 py-2 rounded-md font-bold text-[11px] tracking-widest transition duration-300 shadow-md uppercase">
+              <button className="bg-[#d7b17c] hover:bg-white text-black px-8 py-2.5 rounded-lg font-bold text-[11px] tracking-widest transition-all duration-300 shadow-lg hover:shadow-[#d7b17c]/20 hover:-translate-y-0.5 uppercase">
                 ENQUIRE NOW
               </button>
             </Link>
