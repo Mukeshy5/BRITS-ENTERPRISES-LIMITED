@@ -18,7 +18,7 @@ const Home = () => {
             />
           </picture>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#235347] via-[#235347]/90 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1d3831] via-[#235347]/90 to-transparent" />
         </div>
 
         {/* Hero Content */}

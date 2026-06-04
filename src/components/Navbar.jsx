@@ -24,7 +24,7 @@ const Navbar = () => {
               <h2 className="text-[#235347] text-sm md:text-xl font-bold leading-none tracking-tighter uppercase group-hover:text-black transition-colors duration-300">
                 BRITS
               </h2>
-              <span className="text-gray-400 text-[8px] md:text-[10px] font-bold tracking-[0.2em] uppercase leading-none mt-1">
+              <span className="text-gray-700 text-[8px] md:text-[10px] font-bold tracking-[0.2em] uppercase leading-none mt-1">
                 Enterprises <span className="text-[#235347]">Ltd</span>
               </span>
              
