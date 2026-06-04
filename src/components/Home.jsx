@@ -18,21 +18,20 @@ const Home = () => {
             />
           </picture>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#02172B] via-[#02172B]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#DAF1DE] via-[#DAF1DE]/90 to-transparent" />
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 flex-1 flex items-center">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-20">
             <div className="max-w-3xl">
-              <p className="text-gray-300 text-xs sm:text-sm mb-4">
+              <p className="text-[#235347] text-xs sm:text-sm mb-4 font-bold uppercase tracking-[0.3em]">
                 Company No.: 14985907
               </p>
 
               <h1
                 className="
-            text-[#E8C48A]
-            font-serif
+            text-[#235347]
             font-bold
             leading-tight
             break-words
@@ -48,11 +47,11 @@ const Home = () => {
                 LIMITED
               </h1>
 
-              <div className="w-16 h-[2px] bg-[#E8C48A] my-6 sm:my-8"></div>
+              <div className="w-20 h-[3px] bg-[#235347] my-6 sm:my-8"></div>
 
               <p
                 className="
-            text-gray-300
+            text-gray-700
             leading-relaxed
             max-w-xl
             mb-8
@@ -69,17 +68,19 @@ const Home = () => {
                 <a
                   href="#business"
                   className="
-              bg-[#E8C48A]
-              text-black
-              font-semibold
+              bg-[#DAF1DE]
+              text-[#235347]
+              font-bold
               px-8
               py-4
-              rounded-lg
-              hover:bg-[#dcb06d]
-              transition
+              rounded-xl
+              hover:bg-[#235347] hover:text-white
+              transition-all duration-300
               text-center
               w-full
               sm:w-auto
+              shadow-lg hover:shadow-[#DAF1DE]/30
+              uppercase text-xs tracking-widest
             "
                 >
                   OUR BUSINESS →
@@ -89,17 +90,19 @@ const Home = () => {
                   to="/contact"
                   className="
               border
-              border-[#E8C48A]
-              text-white
+              border-[#235347]
+              text-[#235347]
               px-8
               py-4
-              rounded-lg
-              hover:bg-[#E8C48A]
-              hover:text-black
-              transition
+              rounded-xl
+              hover:bg-[#235347]
+              hover:text-white
+              transition-all duration-300
               text-center
               w-full
               sm:w-auto
+              font-bold
+              uppercase text-xs tracking-widest
             "
                 >
                   CONTACT US
@@ -110,146 +113,115 @@ const Home = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="relative z-20 bg-[#011B33]/95 border-t border-[#163453]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {/* Company */}
-              <div className="flex gap-4">
-                <div className="text-3xl text-[#E8C48A] shrink-0">🏢</div>
-
-                <div>
-                  <p className="text-[#E8C48A] text-sm">Company No.</p>
-
-                  <h3 className="text-lg sm:text-xl font-semibold text-white">
-                    14985907
-                  </h3>
-                </div>
-              </div>
-
-              {/* Address */}
-              <div className="flex gap-4">
-                <div className="text-3xl text-[#E8C48A] shrink-0">📍</div>
-
-                <div>
-                  <p className="text-[#E8C48A] text-xs uppercase tracking-widest">
-                    Address
-                  </p>
-
-                  <p className="text-sm sm:text-base text-white break-words">
-                    Stanley House, Kelvin Way, Crawley, England, RH10 9SE
-                  </p>
-                </div>
-              </div>
-
-              {/* Business */}
-              <div className="flex gap-4">
-                <div className="text-3xl text-[#E8C48A] shrink-0">⚙️</div>
-
-                <div>
-                  <p className="text-[#E8C48A] text-xs uppercase tracking-widest">
-                    Nature of Business
-                  </p>
-
-                  <p className="text-sm sm:text-base text-white">
-                    Freight Air Transport, Premium Lifestyle Products & Interior
-                    Solutions
-                  </p>
-                </div>
-              </div>
+        <div className="relative z-20 bg-[#DAF1DE]/95 border-t border-[#235347]/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 text-center">
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-3xl mx-auto font-medium">
+              BRITS ENTERPRISES LIMITED is a UK-registered global business specializing in multi-sector solutions including Aviation, Logistics, Premium Lifestyle Products, and Interior Finishes.
+              We are committed to delivering excellence and building lasting value for our clients worldwide.
+            </p>
+            <div className="flex justify-center mt-4">
+              <Link to="/about" className="text-[#235347] hover:text-black transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">
+                Learn More About Us →
+              </Link>
             </div>
           </div>
         </div>
       </section>
       {/* Business Section */}
-      <section className="py-16 md:py-24" id="business">
+      <section className="py-24 bg-white" id="business">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            <div className="sm:col-span-2 lg:col-span-1 mb-8 lg:mb-0">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-4 mb-8 lg:mb-0">
+              <span className="text-[#235347] text-xs font-bold uppercase tracking-[0.3em] block mb-4">Our Expertise</span>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#235347]">
                 Delivering Value Across The World
               </h2>
-              <p className="text-gray-600 mb-6">
-                Brits Enterprises Limited is a diversified company engaged in
-                global air freight solutions, premium products and interior
-                decorative services.
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                A diversified UK-registered enterprise bridging global logistics with premium lifestyle craftsmanship. We represent excellence in every shipment and every product.
               </p>
               <Link
                 to="/products"
-                className="inline-block bg-[#061A2F] text-white px-8 py-4 rounded-lg hover:bg-black transition-colors text-center"
+                className="inline-block bg-[#235347] text-[#DAF1DE] px-10 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-300 shadow-xl"
               >
-                Explore More
+                View Catalog
               </Link>
             </div>
 
-            {/* Card 1 */}
-            <div className="bg-white shadow-lg rounded-xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800"
-                className="h-56 w-full object-cover"
-                alt="Freight Air Transport"
-                title="Freight Air Transport"
-              />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3">
-                  Freight Air Transport
-                </h3>
-                <p className="text-gray-600">
-                  Reliable and efficient global air freight solutions.
-                </p>
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              {/* Card 1 */}
+              <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all duration-500 group">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    alt="Freight Air Transport"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-[#235347]">
+                    Freight Air Transport
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Reliable and efficient global air freight solutions tailored for your business needs.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Card 2 */}
-            <div className="bg-white shadow-lg rounded-xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=800"
-                className="h-56 w-full object-cover"
-                alt="Tote Bags / Shopping Bags"
-                title="Tote Bags / Shopping Bags"
-              />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3">
-                  Tote Bags / Shopping Bags
-                </h3>
-                <p className="text-gray-600">
-                  Premium bags designed for modern lifestyles.
-                </p>
+              {/* Card 2 */}
+              <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all duration-500 group">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=800"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    alt="Tote Bags / Shopping Bags"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-[#235347]">
+                    Tote Bags / Shopping Bags
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Premium, durable bags designed with a focus on modern aesthetics and sustainability.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Card 3 */}
-            <div className="bg-white shadow-lg rounded-xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1549439602-43ebca2327af?q=80&w=800"
-                className="h-56 w-full object-cover"
-                alt="Jewellery Box / Gift Boxes"
-                title="Jewellery Box / Gift Boxes"
-              />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3">
-                  Jewellery Box / Gift Boxes
-                </h3>
-                <p className="text-gray-600">
-                  Luxury packaging solutions for gifts and jewellery.
-                </p>
+              {/* Card 3 */}
+              <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all duration-500 group">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1549439602-43ebca2327af?q=80&w=800"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    alt="Jewellery Box / Gift Boxes"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-[#235347]">
+                    Jewellery Box / Gift Boxes
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Luxury packaging solutions that elevate the gifting experience for every occasion.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Card 4 */}
-            <div className="bg-white shadow-lg rounded-xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1562184552-997c461abbe6?q=80&w=800"
-                className="h-56 w-full object-cover"
-                alt="Interior Decorative Painting"
-                title="Interior Decorative Painting"
-              />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3">
-                  Interior Decorative Painting
-                </h3>
-                <p className="text-gray-600">
-                  Elegant wall finishes and decorative solutions.
-                </p>
+              {/* Card 4 */}
+              <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all duration-500 group">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1562184552-997c461abbe6?q=80&w=800"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    alt="Interior Decorative Painting"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-[#235347]">
+                    Interior Decorative Painting
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Bespoke wall finishes and high-end decorative solutions for luxury spaces.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -257,16 +229,16 @@ const Home = () => {
       </section>
 
       {/* Aviation & Airport Services Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-4 bg-[#DAF1DE]/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
-            <span className="text-[#d7b17c] text-xs font-bold uppercase tracking-widest block mb-3">
+            <span className="text-[#235347] text-xs font-bold uppercase tracking-widest block mb-3">
               Logistics Excellence
             </span>
-            <h2 className="text-[#061A2F] font-serif text-3xl md:text-5xl font-bold leading-tight">
+            <h2 className="text-black text-3xl md:text-5xl font-bold leading-tight">
               Aviation & Airport Solutions
             </h2>
-            <div className="w-20 h-1 bg-[#d7b17c] mt-6"></div>
+            <div className="w-20 h-1 bg-[#8EB69B] mt-6"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -281,7 +253,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-[#061A2F]">
+                <h3 className="text-2xl font-semibold mb-3 text-[#235347]">
                   Ground Handling
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -302,7 +274,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-[#061A2F]">
+                <h3 className="text-2xl font-semibold mb-3 text-[#235347]">
                   Cargo Charters
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -323,7 +295,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-[#061A2F]">
+                <h3 className="text-2xl font-semibold mb-3 text-[#235347]">
                   Secure Warehousing
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -344,7 +316,7 @@ const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-[#061A2F]">
+                <h3 className="text-2xl font-semibold mb-3 text-[#235347]">
                   Global Logistics
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -358,7 +330,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-[#061A2F] text-white relative overflow-hidden font-sans">
+      <section className="py-16 md:py-24 bg-[#DAF1DE] text-[#235347] relative overflow-hidden font-sans">
         {/* Background Overlay */}
         <div
           className="absolute inset-0 opacity-10 grayscale pointer-events-none"
@@ -369,18 +341,18 @@ const Home = () => {
             backgroundPosition: "center",
           }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#061A2F]/90 via-[#061A2F] to-[#061A2F]/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#DAF1DE]/90 via-[#DAF1DE] to-[#DAF1DE]/95"></div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <span className="text-[#d7b17c] text-xs font-bold uppercase tracking-[0.4em] block mb-4">
+            <span className="text-[#235347] text-xs font-bold uppercase tracking-[0.4em] block mb-4">
               Why Choose Brits?
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
               Quality. Reliability.{" "}
-              <span className="text-[#d7b17c]">Global Reach.</span>
+              <span className="text-[#235347]">Global Reach.</span>
             </h2>
-            <div className="w-20 h-1 bg-[#d7b17c] mx-auto"></div>
+            <div className="w-20 h-1 bg-[#235347] mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -413,15 +385,15 @@ const Home = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-[#d7b17c]/50 transition-all duration-500 text-center flex flex-col items-center"
+                className="group bg-[#235347]/5 border border-[#235347]/10 p-8 rounded-2xl hover:bg-white hover:border-[#235347]/50 transition-all duration-500 text-center flex flex-col items-center"
               >
-                <div className="w-16 h-16 bg-[#d7b17c]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#d7b17c]/20 transition-all duration-500 shadow-xl">
+                <div className="w-16 h-16 bg-[#235347]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#235347] transition-all duration-500 shadow-xl">
                   <span className="text-3xl">{item.icon}</span>
                 </div>
-                <h4 className="text-[#d7b17c] text-[13px] font-bold uppercase tracking-widest mb-3">
+                <h4 className="text-[#235347] text-[13px] font-bold uppercase tracking-widest mb-3">
                   {item.title}
                 </h4>
-                <p className="text-gray-400 text-xs leading-relaxed font-light">
+                <p className="text-gray-600 text-xs leading-relaxed font-medium">
                   {item.desc}
                 </p>
               </div>
@@ -444,10 +416,10 @@ const Home = () => {
             </div>
 
             <div className="lg:col-span-7 lg:pl-6">
-              <span className="text-[#d7b17c] text-xs font-bold uppercase tracking-widest block mb-3">
+              <span className="text-[#235347] text-xs font-bold uppercase tracking-widest block mb-3">
                 About Us
               </span>
-              <h2 className="text-[#061A2F] font-serif text-3xl md:text-4xl font-bold leading-tight mb-6">
+              <h2 className="text-black text-3xl md:text-4xl font-bold leading-tight mb-6">
                 Built on Trust.
                 <br />
                 Driven by Excellence.
@@ -465,19 +437,19 @@ const Home = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-gray-100 text-center md:text-left">
                 <div className="flex flex-col md:flex-row items-center gap-3 justify-center md:justify-start">
                   <span className="text-2xl">🌐</span>
-                  <span className="text-[#061A2F] font-bold text-[10px] uppercase tracking-wider">
+                  <span className="text-black font-bold text-[10px] uppercase tracking-wider">
                     Global Operations
                   </span>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-3 border-y sm:border-y-0 sm:border-x border-gray-100 py-4 sm:py-0 px-2 justify-center md:justify-start">
                   <span className="text-2xl">✅</span>
-                  <span className="text-[#061A2F] font-bold text-[10px] uppercase tracking-wider">
+                  <span className="text-black font-bold text-[10px] uppercase tracking-wider">
                     Quality Products
                   </span>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-3 justify-center md:justify-start">
                   <span className="text-2xl">😊</span>
-                  <span className="text-[#061A2F] font-bold text-[10px] uppercase tracking-wider">
+                  <span className="text-black font-bold text-[10px] uppercase tracking-wider">
                     Customer Satisfaction
                   </span>
                 </div>
