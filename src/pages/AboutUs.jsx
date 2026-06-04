@@ -26,6 +26,8 @@ const AboutUs = () => {
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200"
                 className="rounded-2xl shadow-2xl w-full h-[300px] md:h-[500px] object-cover"
                 alt="Corporate Office"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute bottom-8 right-8 bg-[#061A2F] p-8 rounded-xl shadow-2xl border-l-4 border-[#d7b17c]">
                 <p className="text-[#d7b17c] text-3xl font-bold italic">Est. 2023</p>

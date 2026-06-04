@@ -6,94 +6,151 @@ import heroBgMobile from "../assets/mobile.jpeg";
 const Home = () => {
   return (
     <div>
-      {/* Hero Section */}
-      {/* <!-- Hero Section --> */}
-      <section className="relative min-h-screen md:min-h-screen overflow-hidden flex flex-col">
-        {/* <!-- Background Image --> */}
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
+        {/* Background */}
         <div className="absolute inset-0">
-          <picture className="w-full h-full">
-            {/* 768px se kam screen par mobile.jpeg dikhayega */}
-            <source media="(max-width: 768px)" srcSet={heroBgMobile} />
-            {/* Desktop ke liye default hero-bg.jpeg load karega */}
+          <picture className="block w-full h-full">
+            <source media="(max-width:768px)" srcSet={heroBgMobile} />
             <img
               src={heroBg}
               alt="Air Cargo Background"
               className="w-full h-full object-cover"
             />
           </picture>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#02172B] via-[#02172B]/80 to-transparent"></div>
+
+          <div className="absolute inset-0 bg-gradient-to-r from-[#02172B] via-[#02172B]/80 to-transparent" />
         </div>
 
-        {/* <!-- Content --> */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-4 flex-grow flex items-center">
-          <div className="max-w-xl pt-10">
-            <p className="text-gray-300 text-sm mb-4">Company No.: 14985907</p>
+        {/* Hero Content */}
+        <div className="relative z-10 flex-1 flex items-center">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-20">
+            <div className="max-w-3xl">
+              <p className="text-gray-300 text-xs sm:text-sm mb-4">
+                Company No.: 14985907
+              </p>
 
-            <h1 className="text-[#E8C48A] text-3xl sm:text-6xl md:text-7xl font-serif font-bold leading-tight md:leading-none">
-              BRITS
-              <br />
-              ENTERPRISES
-              <br />
-              LIMITED
-            </h1>
-
-            <div className="w-14 h-[2px] bg-[#E8C48A] my-8"></div>
-
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-10">
-              A global business delivering excellence across air freight and
-              premium lifestyle products with quality you can trust.
-            </p>
-
-            <div className="flex flex-col sm:flex-row flex-wrap gap-5">
-              <a
-                href="#business"
-                className="bg-[#E8C48A] text-black font-semibold px-8 py-4 rounded-lg hover:bg-[#dcb06d] transition text-center"
+              <h1
+                className="
+            text-[#E8C48A]
+            font-serif
+            font-bold
+            leading-tight
+            break-words
+            text-4xl
+            sm:text-6xl
+            lg:text-7xl
+          "
               >
-                OUR BUSINESS →
-              </a>
+                BRITS
+                <br />
+                ENTERPRISES
+                <br />
+                LIMITED
+              </h1>
 
-              <Link
-                to="/contact"
-                className="border border-[#E8C48A] text-white px-8 py-4 rounded-lg hover:bg-[#E8C48A] hover:text-black transition text-center"
+              <div className="w-16 h-[2px] bg-[#E8C48A] my-6 sm:my-8"></div>
+
+              <p
+                className="
+            text-gray-300
+            leading-relaxed
+            max-w-xl
+            mb-8
+          "
+                style={{
+                  fontSize: "clamp(1rem,2vw,1.25rem)",
+                }}
               >
-                CONTACT US
-              </Link>
+                A global business delivering excellence across air freight and
+                premium lifestyle products with quality you can trust.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
+                <a
+                  href="#business"
+                  className="
+              bg-[#E8C48A]
+              text-black
+              font-semibold
+              px-8
+              py-4
+              rounded-lg
+              hover:bg-[#dcb06d]
+              transition
+              text-center
+              w-full
+              sm:w-auto
+            "
+                >
+                  OUR BUSINESS →
+                </a>
+
+                <Link
+                  to="/contact"
+                  className="
+              border
+              border-[#E8C48A]
+              text-white
+              px-8
+              py-4
+              rounded-lg
+              hover:bg-[#E8C48A]
+              hover:text-black
+              transition
+              text-center
+              w-full
+              sm:w-auto
+            "
+                >
+                  CONTACT US
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* <!-- Bottom Info Bar --> */}
-        <div className="relative md:absolute md:bottom-0 md:left-0 md:right-0 bg-[#011B33]/95 border-t border-[#163453] z-20">
-          <div className="max-w-7xl mx-auto px-8 py-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 text-white">
-              {/* <!-- Company --> */}
-              <div className="flex items-start gap-4">
-                <div className="text-3xl md:text-4xl text-[#E8C48A]">🏢</div>
+        {/* Bottom Bar */}
+        <div className="relative z-20 bg-[#011B33]/95 border-t border-[#163453]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+              {/* Company */}
+              <div className="flex gap-4">
+                <div className="text-3xl text-[#E8C48A] shrink-0">🏢</div>
+
                 <div>
                   <p className="text-[#E8C48A] text-sm">Company No.</p>
-                  <h3 className="text-lg md:text-2xl font-semibold">
+
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">
                     14985907
                   </h3>
                 </div>
               </div>
 
-              {/* <!-- Address --> */}
-              <div className="flex items-start gap-4">
-                <div className="text-3xl md:text-4xl text-[#E8C48A]">📍</div>
+              {/* Address */}
+              <div className="flex gap-4">
+                <div className="text-3xl text-[#E8C48A] shrink-0">📍</div>
+
                 <div>
-                  <p className="text-[#E8C48A] text-[10px] uppercase tracking-widest">Address</p>
-                  <p className="text-sm md:text-base leading-snug">
-                    Stanley House, kelvin way, Crawley, England, RH10 9SE
+                  <p className="text-[#E8C48A] text-xs uppercase tracking-widest">
+                    Address
+                  </p>
+
+                  <p className="text-sm sm:text-base text-white break-words">
+                    Stanley House, Kelvin Way, Crawley, England, RH10 9SE
                   </p>
                 </div>
               </div>
 
-              {/* <!-- Business --> */}
-              <div className="flex items-start gap-4">
-                <div className="text-3xl md:text-4xl text-[#E8C48A]">⚙️</div>
+              {/* Business */}
+              <div className="flex gap-4">
+                <div className="text-3xl text-[#E8C48A] shrink-0">⚙️</div>
+
                 <div>
-                  <p className="text-[#E8C48A] text-[10px] uppercase tracking-widest">Nature of Business</p>
-                  <p className="text-sm md:text-base leading-snug">
+                  <p className="text-[#E8C48A] text-xs uppercase tracking-widest">
+                    Nature of Business
+                  </p>
+
+                  <p className="text-sm sm:text-base text-white">
                     Freight Air Transport, Premium Lifestyle Products & Interior
                     Solutions
                   </p>
@@ -103,7 +160,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Business Section */}
       <section className="py-16 md:py-24" id="business">
         <div className="max-w-7xl mx-auto px-6">
