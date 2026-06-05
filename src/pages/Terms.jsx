@@ -50,7 +50,11 @@ const Terms = () => {
             </p>
             <div className="mt-3 space-y-1">
               <p>Email: info@britsenterprises.co.uk</p>
-              <p>Phone: +44 123 456 7890</p>
+              <p>Phone: 
+                <a href="tel:+447349049886" className="hover:text-[#235347] transition-colors ml-1">
+                  07349 049886
+                </a>
+              </p>
               <p>Address: Stanley House, Kelvin Way, Crawley, England RH10 9SE</p>
             </div>
           </div>

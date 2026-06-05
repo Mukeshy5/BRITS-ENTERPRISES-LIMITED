@@ -55,7 +55,9 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg text-black">Phone Number</h4>
-                    <p className="text-gray-600">+44 123 456 7890</p>
+                    <a href="tel:+447349049886" className="text-gray-600 hover:text-[#235347] transition-colors">
+                      07349 049886
+                    </a>
                   </div>
                 </div>
               </div>

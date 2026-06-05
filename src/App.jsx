@@ -9,7 +9,6 @@ import AboutUs from './pages/AboutUs'
 import RequestQuote from './pages/RequestQuote'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Terms from './pages/Terms'
-import Developer from './common/developer'
 import ScrollToTop from './common/ScrollToTop'
 
 const App = () => {
@@ -27,7 +26,6 @@ const App = () => {
             <Route path="/request-quote" element={<RequestQuote />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
-            <Route path="/developer" element={<Developer />} />
             
             <Route path="*" element={<h1 className="text-center py-24 text-4xl">404 Not Found</h1>} />
           </Routes>

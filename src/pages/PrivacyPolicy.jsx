@@ -64,6 +64,10 @@ const PrivacyPolicy = () => {
                   <span className="text-[#8EB69B]">✉️</span>
                   <a href="mailto:info@britsenterprises.co.uk" className="hover:text-[#8EB69B] transition-colors">info@britsenterprises.co.uk</a>
                 </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-[#8EB69B]">📞</span>
+                  <a href="tel:+447349049886" className="hover:text-[#8EB69B] transition-colors"> 7349 049886</a>
+                </div>
                 <div className="flex items-start gap-3">
                   <span className="text-[#8EB69B]">📍</span>
                   <span>Stanley House, Kelvin Way, Crawley, England RH10 9SE</span>

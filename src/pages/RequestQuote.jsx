@@ -24,10 +24,10 @@ const RequestQuote = () => {
               <h3 className="text-xl font-bold text-black mb-2 uppercase tracking-wider">Call Us</h3>
               <p className="text-gray-500 text-sm mb-6">Available for immediate logistics support.</p>
               <a 
-                href="tel:+441234567890" 
+                href="tel:+447349049886" 
                 className="block py-3 px-6 bg-[#235347] text-[#DAF1DE] rounded-xl font-bold text-sm hover:bg-black transition-colors"
               >
-                +44 123 456 7890
+              07349 049886
               </a>
             </div>
 

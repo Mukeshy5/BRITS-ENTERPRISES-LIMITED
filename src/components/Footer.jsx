@@ -99,15 +99,6 @@ const Footer = () => {
           <p className="text-[10px] font-bold tracking-[0.2em] text-[#DAF1DE]/40 uppercase">
             © {new Date().getFullYear()} BRITS ENTERPRISES LIMITED. Global Solutions.
           </p>
-          <div className="flex items-center gap-2">
-            <span className="text-[10px] text-[#DAF1DE]/40 uppercase tracking-widest">Designed by</span>
-            <Link 
-              to="/developer" 
-              className="text-[#8EB69B] text-[10px] font-bold uppercase tracking-widest hover:underline decoration-[#8EB69B]/50 underline-offset-4"
-            >
-              Creative Developer
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
