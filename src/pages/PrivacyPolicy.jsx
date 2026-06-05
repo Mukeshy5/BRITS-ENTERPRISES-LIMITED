@@ -66,7 +66,7 @@ const PrivacyPolicy = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-[#8EB69B]">📞</span>
-                  <a href="tel:+447349049886" className="hover:text-[#8EB69B] transition-colors">07349 049886</a>
+                  <a href="tel:7349049886" className="hover:text-[#8EB69B] transition-colors">07349 049886</a>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-[#8EB69B]">📍</span>

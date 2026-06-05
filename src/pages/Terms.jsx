@@ -51,7 +51,7 @@ const Terms = () => {
             <div className="mt-3 space-y-1">
               <p>Email: info@britsenterprises.co.uk</p>
               <p>Phone: 
-                <a href="tel:+447349049886" className="hover:text-[#235347] transition-colors ml-1">
+                <a href="tel:7349049886" className="hover:text-[#235347] transition-colors ml-1">
                   07349 049886
                 </a>
               </p>
