@@ -4,13 +4,13 @@ const ContactUs = () => {
   return (
     <div className="bg-white">
       {/* Hero Header */}
-      <section className="bg-[#DAF1DE] py-24 relative overflow-hidden">
+      <section className="bg-[#DAF1DE] py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 grayscale pointer-events-none"
              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         <div className="max-w-7xl mx-auto px-6 text-center">
           <span className="text-[#235347] text-xs font-bold uppercase tracking-[0.4em] block mb-4 relative z-10">Get In Touch</span>
-          <h1 className="text-4xl md:text-6xl font-bold text-[#235347] mb-6 relative z-10">Connect With Us</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg font-medium leading-relaxed relative z-10">
+          <h1 className="text-3xl md:text-6xl font-bold text-[#235347] mb-6 relative z-10">Connect With Us</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg font-medium leading-relaxed relative z-10">
             Have a question or looking for a partnership? Our team is here to help you with global logistics and premium solutions.
           </p>
         </div>

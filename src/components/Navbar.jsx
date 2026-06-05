@@ -21,10 +21,10 @@ const Navbar = () => {
           {/* Brand */}
           <Link to="/" className="flex items-center gap-2 md:gap-3 group">
             <div className="flex flex-col justify-center">
-              <h2 className="text-black text-sm md:text-xl font-bold leading-none tracking-tighter uppercase group-hover:text-[#235347] transition-colors duration-300">
+              <h2 className="text-black text-base md:text-xl font-bold leading-none tracking-tighter uppercase group-hover:text-[#235347] transition-colors duration-300">
                 BRITS
               </h2>
-              <span className="text-[#235347] text-[8px] md:text-[10px] font-bold tracking-[0.2em] uppercase leading-none mt-1">
+              <span className="text-[#235347] text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase leading-none mt-1">
                 Enterprises <span className="text-[#8EB69B]">Ltd</span>
               </span>
              
@@ -35,9 +35,9 @@ const Navbar = () => {
           <ul className="hidden lg:flex gap-10">
             {navLinks.map((link) => (
               <li key={link.path} className="group">
-                <Link 
+                <Link
                   to={link.path}
-                  className={`relative inline-block text-[13px] font-bold tracking-widest transition-all duration-300 pb-1 hover:scale-105
+                  className={`relative inline-block text-[12px] font-bold tracking-widest transition-all duration-300 pb-1
                     ${isActive(link.path) ? 'text-black' : 'text-[#235347] hover:text-black'}`}
                 >
                   {link.name}

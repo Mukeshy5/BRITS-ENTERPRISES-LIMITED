@@ -4,10 +4,10 @@ const RequestQuote = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Header consistent with Contact Page */}
-      <header className="bg-[#DAF1DE] text-[#235347] py-20">
+      <header className="bg-[#DAF1DE] text-[#235347] py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#235347] mb-6">Enquire Now</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg font-medium">
+          <h1 className="text-3xl md:text-6xl font-bold text-[#235347] mb-6">Enquire Now</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg font-medium">
             Interested in our premium products or global logistics services? Reach out to us directly for a customized quote and expert assistance.
           </p>
         </div>

@@ -4,14 +4,14 @@ const AboutUs = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Header */}
-      <header className="bg-[#DAF1DE] text-[#235347] py-24 relative overflow-hidden">
+      <header className="bg-white text-[#235347] py-16 md:py-24 relative overflow-hidden border-b border-gray-100">
         <div className="absolute inset-0 opacity-10 grayscale pointer-events-none"
              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <span className="text-[#235347] text-xs font-bold uppercase tracking-[0.4em] block mb-4">Established Excellence</span>
-          <h1 className="text-4xl md:text-6xl font-bold text-[#235347] mb-6">Our Legacy & Future</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg font-medium leading-relaxed">
-            A UK registered global enterprise bridging the gap between sophisticated logistics and premium craftsmanship.
+          <span className="text-[#8EB69B] text-xs font-bold uppercase tracking-[0.2em] block mb-4">Corporate Overview</span>
+          <h1 className="text-3xl md:text-5xl font-bold text-black mb-6 tracking-tight">Our Business Identity</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed">
+            A global enterprise focused on reliable freight solutions and high-quality product manufacturing.
           </p>
         </div>
       </header>
@@ -29,9 +29,9 @@ const AboutUs = () => {
                 loading="lazy"
                 decoding="async"
               />
-              <div className="absolute bottom-8 right-8 bg-[#235347] p-8 rounded-xl shadow-2xl border-l-4 border-[#8EB69B]">
-                <p className="text-[#DAF1DE] text-3xl font-bold italic">Est. 2023</p>
-                <p className="text-gray-400 text-xs uppercase tracking-widest font-bold mt-1">Innovation Journey</p>
+              <div className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 bg-[#235347] p-4 sm:p-8 rounded-xl shadow-2xl border-l-4 border-[#8EB69B]">
+                <p className="text-[#DAF1DE] text-xl sm:text-3xl font-bold italic">Est. 2023</p>
+                <p className="text-gray-400 text-[10px] sm:text-xs uppercase tracking-widest font-bold mt-1">Innovation Journey</p>
               </div>
             </div>
 
@@ -44,11 +44,11 @@ const AboutUs = () => {
               </div>
 
               <p className="text-gray-600 text-lg leading-relaxed">
-                Brits Enterprises Limited is a diversified UK-registered company (No: 14985907) specializing in freight air transport and the production of premium lifestyle products. We represent a new era of business—one that values efficiency in global transit as much as elegance in product design.
+                Brits Enterprises Limited is a diversified company operating across four core sectors: specialized freight air transport, premium bag manufacturing (Tote, Shopping, and Hand Bags), luxury jewellery and gift packaging, and professional interior wall finishes and painting.
               </p>
               
               <p className="text-gray-600 text-lg leading-relaxed">
-                From Stanley House in Crawley to the rest of the world, we ensure that every solution we provide—be it air cargo, bespoke packaging, or interior decorative finishes—meets the highest international standards of quality and reliability.
+                Our business model is built on the principles of reliability and quality. Whether we are managing international air cargo or providing decorative wall finishes, we ensure that every service meets the realistic needs of our clients.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 border-t border-gray-100">
@@ -125,12 +125,12 @@ const AboutUs = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
-              { icon: "🛡️", title: "Unwavering Integrity", desc: "We operate with full transparency, ensuring that our UK-registered status translates into global trust." },
+              { icon: "🛡️", title: "Unwavering Integrity", desc: "We operate with full transparency, ensuring that our professional status translates into global trust." },
               { icon: "✨", title: "Premium Quality", desc: "From wall finishes to luxury gift boxes, we don't settle for anything less than perfection." },
               { icon: "🌍", title: "Global Sustainability", desc: "Optimizing logistics routes and selecting eco-friendly materials for our lifestyle range." }
             ].map((value, i) => (
               <div key={i} className="p-10 bg-white border border-gray-100 rounded-2xl text-center hover:border-[#235347] transition-colors group">
-                <div className="text-5xl mb-6 group-hover:scale-110 transition-transform">{value.icon}</div>
+                <div className="text-4xl sm:text-5xl mb-6 group-hover:scale-110 transition-transform">{value.icon}</div>
                 <h4 className="text-black font-bold text-xl mb-4 tracking-tight">{value.title}</h4>
                 <p className="text-gray-500 leading-relaxed text-sm">{value.desc}</p>
               </div>

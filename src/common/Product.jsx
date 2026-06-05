@@ -92,14 +92,14 @@ const Product = () => {
       category = 'AVIATION';
       if (!specificDesc) baseDesc = 'Precision aviation support and airport services delivering world-class reliability for global operations.';
     } else if (t.includes('BAG') || t.includes('HANDBAG') || t.includes('TOTE') || t.includes('PURSE') || t.includes('SHOPPER') || t.includes('JEWELRY')) {
-      category = 'LIFESTYLE';
-      if (!specificDesc) baseDesc = 'Premium lifestyle essentials crafted with high-quality materials and modern functional design.';
+      category = 'BAGS';
+      if (!specificDesc) baseDesc = 'Premium Tote, Shopping, and Hand bags crafted with durable materials and professional design.';
     } else if (t.includes('BOX') || t.includes('PACKAGING') || t.includes('GIFT')) {
-      category = 'PACKAGING';
-      if (!specificDesc) baseDesc = 'Luxury packaging solutions designed to protect and present your items with professional sophistication.';
+      category = 'GIFT BOXES';
+      if (!specificDesc) baseDesc = 'Luxury jewellery and decorative gift boxes designed for elegant presentation and protection.';
     } else if (t.includes('INTERIOR') || t.includes('WALL') || t.includes('DECOR') || t.includes('PAINTING')) {
       category = 'INTERIOR';
-      if (!specificDesc) baseDesc = 'Bespoke architectural finishes and decorative solutions that create a lasting visual impact in any space.';
+      if (!specificDesc) baseDesc = 'Professional interior painting and decorative wall finishes for high-end residential and commercial spaces.';
     }
 
     return { category, description: baseDesc };
@@ -136,17 +136,17 @@ const Product = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Page Header */}
-      <header className="bg-[#235347] text-[#DAF1DE] py-24">
+      <header className="bg-[#235347] text-[#DAF1DE] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Products & Services</h1>
-          <p className="text-[#DAF1DE]/80 max-w-2xl mx-auto font-medium">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Our Products & Services</h1>
+          <p className="text-[#DAF1DE]/80 max-w-2xl mx-auto font-medium text-sm md:text-base">
             Delivering excellence across the world through our diverse range of premium products and specialized global services.
           </p>
         </div>
       </header>
 
       {/* Step 3: Search Bar Section */}
-      <div className="max-w-3xl mx-auto px-6 mt-6 md:-mt-8 relative z-10">
+      <div className="max-w-3xl mx-auto px-6 mt-8 md:-mt-8 relative z-10">
         <div className="bg-white p-2 rounded-xl shadow-2xl flex items-center border border-[#8EB69B]/20">
           <div className="pl-4 pr-2 text-gray-400">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

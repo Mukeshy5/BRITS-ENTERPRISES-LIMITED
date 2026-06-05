@@ -34,13 +34,13 @@ const Footer = () => {
             <ul className="space-y-4 text-[13px] text-[#DAF1DE]/80">
               <li className="group w-fit">
                 <Link to="/" className="hover:text-white transition-colors relative pb-1">
-                  Home Landing
+                  Home
                   <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-[#8EB69B] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
               <li className="group w-fit">
                 <Link to="/about" className="hover:text-white transition-colors relative pb-1">
-                  About Story
+                  About Us
                   <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-[#8EB69B] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
@@ -84,8 +84,9 @@ const Footer = () => {
             <div className="space-y-4 text-[13px] text-[#DAF1DE]/80">
               <div className="flex gap-3 items-start">
                 <span className="text-[#8EB69B] mt-0.5">📍</span>
-                <p className="leading-relaxed">Stanley House, Kelvin Way, Crawley, England</p>
+                <p className="leading-relaxed">Stanley House, Kelvin Way, Crawley</p>
               </div>
+             
               <div className="flex items-center gap-3 group">
                 <span className="text-[#8EB69B]">📩</span>
                 <a href="mailto:info@britsenterprises.co.uk" className="group-hover:text-white transition-colors">info@britsenterprises.co.uk</a>

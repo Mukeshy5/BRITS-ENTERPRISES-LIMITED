@@ -23,45 +23,20 @@ const Home = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 flex-1 flex items-center">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-20">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-20">
             <div className="max-w-3xl">
-              <p className="text-[#DAF1DE] text-xs sm:text-sm mb-4 font-bold uppercase tracking-[0.3em]">
-                Company No.: 14985907
-              </p>
-
-              <h1
-                className="
-            text-[#DAF1DE]
-            font-bold
-            leading-tight
-            break-words
-            text-4xl
-            sm:text-6xl
-            lg:text-7xl
-          "
-              >
-                BRITS
-                <br />
-                ENTERPRISES
-                <br />
-                LIMITED
+              <h1 className="text-[#DAF1DE] font-bold leading-tight text-3xl sm:text-5xl lg:text-6xl tracking-tight">
+                Global Logistics & <br />
+                <span className="text-[#8EB69B]">Premium Solutions</span>
               </h1>
 
-              <div className="w-20 h-[3px] bg-[#8EB69B] my-6 sm:my-8"></div>
+              <div className="w-12 h-[3px] bg-[#8EB69B] my-8"></div>
 
               <p
-                className="
-            text-[#DAF1DE]/80
-            leading-relaxed
-            max-w-xl
-            mb-8
-          "
-                style={{
-                  fontSize: "clamp(1rem,2vw,1.25rem)",
-                }}
+                className="text-[#DAF1DE]/90 leading-relaxed max-w-xl mb-10 text-base md:text-lg"
               >
-                A global business delivering excellence across air freight and
-                premium lifestyle products with quality you can trust.
+                BRITS ENTERPRISES LIMITED provides professional services across freight air transport, 
+                specialized manufacturing, and interior finishes with a commitment to reliability.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
@@ -80,7 +55,7 @@ const Home = () => {
               w-full
               sm:w-auto
               shadow-lg hover:shadow-[#DAF1DE]/30
-              uppercase text-xs tracking-widest
+              uppercase text-[11px] tracking-widest
             "
                 >
                   OUR BUSINESS →
@@ -102,7 +77,7 @@ const Home = () => {
               w-full
               sm:w-auto
               font-bold
-              uppercase text-xs tracking-widest
+              uppercase text-[11px] tracking-widest
             "
                 >
                   CONTACT US
@@ -114,10 +89,10 @@ const Home = () => {
 
         {/* Bottom Bar */}
         <div className="relative z-20 bg-[#235347]/95 border-t border-[#8EB69B]/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 text-center">
-            <p className="text-[#DAF1DE] text-sm md:text-base leading-relaxed max-w-3xl mx-auto font-medium">
-              BRITS ENTERPRISES LIMITED is a UK-registered global business specializing in multi-sector solutions including Aviation, Logistics, Premium Lifestyle Products, and Interior Finishes.
-              We are committed to delivering excellence and building lasting value for our clients worldwide.
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 text-center">
+            <p className="text-[#DAF1DE]/80 text-sm md:text-base leading-relaxed max-w-5xl mx-auto">
+              Specializing in Freight Air Transport, premium Bag manufacturing (Tote, Shopping, and Hand Bags), 
+              Jewellery and Decorative Gift Boxes, and professional Interior painting and Wall Finishes.
             </p>
             <div className="flex justify-center mt-4">
               <Link to="/about" className="text-[#8EB69B] hover:text-white transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">
@@ -128,20 +103,20 @@ const Home = () => {
         </div>
       </section>
       {/* Business Section */}
-      <section className="py-24 bg-[#DAF1DE]" id="business">
+      <section className="py-24 bg-white" id="business">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4 mb-8 lg:mb-0">
-              <span className="text-[#235347] text-xs font-bold uppercase tracking-[0.3em] block mb-4">Our Expertise</span>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-black">
-                Delivering Value Across The World
+              <span className="text-[#8EB69B] text-sm font-bold uppercase tracking-[0.2em] block mb-4">Our Expertise</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black tracking-tight">
+                Quality Solutions for Global Markets
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                A diversified UK-registered enterprise bridging global logistics with premium lifestyle craftsmanship. We represent excellence in every shipment and every product.
+                Our diverse portfolio bridges efficient global logistics with precise manufacturing craftsmanship, ensuring high standards across all operations.
               </p>
               <Link
                 to="/products"
-                className="inline-block bg-[#235347] text-[#DAF1DE] px-10 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-[#8EB69B] hover:text-black transition-all duration-300 shadow-xl"
+                className="inline-block bg-[#235347] text-[#DAF1DE] px-10 py-4 rounded-xl font-bold text-[11px] uppercase tracking-widest hover:bg-[#8EB69B] hover:text-black transition-all duration-300 shadow-xl"
               >
                 View Catalog
               </Link>
@@ -149,77 +124,77 @@ const Home = () => {
 
             <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
               {/* Card 1 */}
-              <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all duration-500 group">
-                <div className="h-48 overflow-hidden">
+              <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-500 group">
+                <div className="h-52 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     alt="Freight Air Transport"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-black">
+                  <h3 className="text-xl font-bold mb-2 text-black">
                     Freight Air Transport
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    Reliable and efficient global air freight solutions tailored for your business needs.
+                    Reliable air cargo solutions providing efficient transportation for goods across global supply chains and major international hubs.
                   </p>
                 </div>
               </div>
 
               {/* Card 2 */}
-              <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all duration-500 group">
-                <div className="h-48 overflow-hidden">
+              <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-500 group">
+                <div className="h-52 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=800"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     alt="Tote Bags / Shopping Bags"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-black">
-                    Tote Bags / Shopping Bags
+                  <h3 className="text-xl font-bold mb-2 text-black">
+                    Tote, Shopping & Hand Bags
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    Premium, durable bags designed with a focus on modern aesthetics and sustainability.
+                  <p className="text-gray-600 text-sm italic">
+                    Premium collection of bags crafted with durable materials for professional and daily use.
                   </p>
                 </div>
               </div>
 
               {/* Card 3 */}
-              <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all duration-500 group">
-                <div className="h-48 overflow-hidden">
+              <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-500 group">
+                <div className="h-52 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1549439602-43ebca2327af?q=80&w=800"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     alt="Jewellery Box / Gift Boxes"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-black">
-                    Jewellery Box / Gift Boxes
+                  <h3 className="text-xl font-bold mb-2 text-black">
+                    Jewellery & Decorative Gift Boxes
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    Luxury packaging solutions that elevate the gifting experience for every occasion.
+                  <p className="text-gray-600 text-sm italic">
+                    Elegant decorative packaging designed for high-quality presentation and secure storage.
                   </p>
                 </div>
               </div>
 
               {/* Card 4 */}
-              <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all duration-500 group">
-                <div className="h-48 overflow-hidden">
+              <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-500 group">
+                <div className="h-52 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1562184552-997c461abbe6?q=80&w=800"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     alt="Interior Decorative Painting"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-black">
-                    Interior Decorative Painting
+                  <h3 className="text-xl font-bold mb-2 text-black">
+                    Interior Painting & Wall Finishes
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    Bespoke wall finishes and high-end decorative solutions for luxury spaces.
+                    Professional interior use painting and decorative wall finishes that enhance the aesthetic and value of modern spaces.
                   </p>
                 </div>
               </div>
@@ -229,16 +204,16 @@ const Home = () => {
       </section>
 
       {/* Aviation & Airport Services Section */}
-      <section className="py-16 md:py-4 bg-white">
+      <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
-            <span className="text-[#235347] text-xs font-bold uppercase tracking-widest block mb-3">
+            <span className="text-[#8EB69B] text-xs font-bold uppercase tracking-widest block mb-3">
               Logistics Excellence
             </span>
-            <h2 className="text-[#235347] text-3xl md:text-5xl font-bold leading-tight">
+            <h2 className="text-[#235347] text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
               Aviation & Airport Solutions
             </h2>
-            <div className="w-20 h-1 bg-[#8EB69B] mt-6"></div>
+            <div className="w-16 h-1 bg-[#8EB69B] mt-6"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -249,7 +224,7 @@ const Home = () => {
                   src="https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=800"
                   alt="Ground Handling"
                   title="Ground Handling"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="p-6">
@@ -270,7 +245,7 @@ const Home = () => {
                   src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=800"
                   alt="Cargo Charters"
                   title="Cargo Charters"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="p-6">
@@ -291,7 +266,7 @@ const Home = () => {
                   src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=800"
                   alt="Secure Warehousing"
                   title="Secure Warehousing"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="p-6">
@@ -312,7 +287,7 @@ const Home = () => {
                   src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800"
                   alt="Global Logistics"
                   title="Global Logistics"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="p-6">
@@ -330,29 +305,17 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-[#235347] text-[#DAF1DE] relative overflow-hidden font-sans">
-        {/* Background Overlay */}
-        <div
-          className="absolute inset-0 opacity-10 grayscale pointer-events-none"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#235347]/90 via-[#235347] to-[#235347]/95"></div>
-
+      <section className="py-32 bg-[#f4f7f5] relative overflow-hidden font-sans">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <span className="text-[#235347] text-xs font-bold uppercase tracking-[0.4em] block mb-4">
-              Why Choose Brits?
+            <span className="text-[#8EB69B] text-xs font-bold uppercase tracking-[0.4em] block mb-4">
+              Value Proposition
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-[#235347]">
               Quality. Reliability.{" "}
-              <span className="text-[#DAF1DE]">Global Reach.</span>
+              <span className="text-[#8EB69B]">Global Reach.</span>
             </h2>
-            <div className="w-20 h-1 bg-[#235347] mx-auto"></div>
+            <div className="w-16 h-1 bg-[#235347] mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -385,15 +348,15 @@ const Home = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-[#8EB69B]/50 transition-all duration-500 text-center flex flex-col items-center"
+                className="group bg-white border border-gray-100 p-8 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-500 text-center flex flex-col items-center"
               >
-                <div className="w-16 h-16 bg-[#8EB69B]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#8EB69B]/20 transition-all duration-500 shadow-xl">
-                  <span className="text-3xl">{item.icon}</span>
+                <div className="w-14 h-14 bg-[#DAF1DE] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#235347] transition-all duration-500 shadow-sm">
+                  <span className="text-2xl group-hover:filter group-hover:brightness-200">{item.icon}</span>
                 </div>
-                <h4 className="text-[#DAF1DE] text-[13px] font-bold uppercase tracking-widest mb-3">
+                <h4 className="text-[#235347] text-[13px] font-bold uppercase tracking-widest mb-3">
                   {item.title}
                 </h4>
-                <p className="text-gray-400 text-xs leading-relaxed font-medium">
+                <p className="text-gray-500 text-xs leading-relaxed font-medium">
                   {item.desc}
                 </p>
               </div>
@@ -425,7 +388,7 @@ const Home = () => {
                 Driven by Excellence.
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Brits Enterprises Limited is a UK registered company committed
+                Brits Enterprises Limited is committed
                 to delivering world-class solutions in air freight, premium
                 products and interior services.
               </p>
