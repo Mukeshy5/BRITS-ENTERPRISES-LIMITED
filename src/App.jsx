@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Home from './components/Home'
-import Product from './common/Product'
-import ContactUs from './pages/ContactUs'
-import AboutUs from './pages/AboutUs'
-import RequestQuote from './pages/RequestQuote'
-import PrivacyPolicy from './pages/PrivacyPolicy'
-import Terms from './pages/Terms'
 import ScrollToTop from './common/ScrollToTop'
+
+// Lazy load routes to improve initial load time
+const Home = lazy(() => import('./components/Home'))
+const Product = lazy(() => import('./common/Product'))
+const ContactUs = lazy(() => import('./pages/ContactUs'))
+const AboutUs = lazy(() => import('./pages/AboutUs'))
+const RequestQuote = lazy(() => import('./pages/RequestQuote'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
+const Terms = lazy(() => import('./pages/Terms'))
+
+const LoadingSpinner = () => <div className="flex justify-center items-center h-screen bg-white">Loading...</div>
 
 const App = () => {
   return (
@@ -18,17 +22,19 @@ const App = () => {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Product />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/request-quote" element={<RequestQuote />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<Terms />} />
-            
-            <Route path="*" element={<h1 className="text-center py-24 text-4xl">404 Not Found</h1>} />
-          </Routes>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Product />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="/terms" element={<Terms />} />
+              
+              <Route path="*" element={<h1 className="text-center py-24 text-4xl">404 Not Found</h1>} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
       </div>

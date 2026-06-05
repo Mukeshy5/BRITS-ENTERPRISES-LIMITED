@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 
 const Product = () => {
@@ -105,7 +105,8 @@ const Product = () => {
     return { category, description: baseDesc };
   };
 
-  const products = Object.entries(imageModules)
+  // Memoize product list generation to avoid recalculating on search filter
+  const products = useMemo(() => Object.entries(imageModules)
     // Filter out branding assets like logo to ensure only products are shown
     .filter(([path]) => 
       !path.toLowerCase().includes('logo') && 
@@ -126,7 +127,7 @@ const Product = () => {
         category: category,
         description: description
       };
-    });
+    }), [imageModules]);
 
   // Step 3: Requirements - Case-insensitive real-time search by product title
   const filteredProducts = products.filter(product =>

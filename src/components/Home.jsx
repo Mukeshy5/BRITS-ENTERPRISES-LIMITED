@@ -26,17 +26,19 @@ const Home = () => {
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-20">
             <div className="max-w-3xl">
               <h1 className="text-[#DAF1DE] font-bold leading-tight text-3xl sm:text-5xl lg:text-6xl tracking-tight">
-                Global Logistics & <br />
-                <span className="text-[#8EB69B]">Premium Solutions</span>
+                BRITS ENTERPRISES LIMITED
               </h1>
 
               <div className="w-12 h-[3px] bg-[#8EB69B] my-8"></div>
 
               <p
-                className="text-[#DAF1DE]/90 leading-relaxed max-w-xl mb-10 text-base md:text-lg"
+                className="text-[#DAF1DE]/90 leading-relaxed max-w-2xl mb-10 text-base md:text-lg"
               >
-                BRITS ENTERPRISES LIMITED provides professional services across freight air transport, 
-                specialized manufacturing, and interior finishes with a commitment to reliability.
+                BRITS ENTERPRISES LIMITED is a diversified global enterprise dedicated to delivering excellence 
+                across freight air transport, specialized manufacturing of premium bags and gift boxes, and 
+                professional interior finishes. With a steadfast commitment to reliability and quality, 
+                we bridge international markets and elevate lifestyle standards through our comprehensive 
+                range of tailored services and high-end products.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
@@ -129,6 +131,8 @@ const Home = () => {
                   <img
                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
                     alt="Freight Air Transport"
                   />
                 </div>
@@ -148,6 +152,8 @@ const Home = () => {
                   <img
                     src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=800"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
                     alt="Tote Bags / Shopping Bags"
                   />
                 </div>
@@ -167,6 +173,8 @@ const Home = () => {
                   <img
                     src="https://images.unsplash.com/photo-1549439602-43ebca2327af?q=80&w=800"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
                     alt="Jewellery Box / Gift Boxes"
                   />
                 </div>
@@ -186,6 +194,8 @@ const Home = () => {
                   <img
                     src="https://images.unsplash.com/photo-1562184552-997c461abbe6?q=80&w=800"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
                     alt="Interior Decorative Painting"
                   />
                 </div>
@@ -204,7 +214,7 @@ const Home = () => {
       </section>
 
       {/* Aviation & Airport Services Section */}
-      <section className="py-32 bg-white">
+      <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
             <span className="text-[#8EB69B] text-xs font-bold uppercase tracking-widest block mb-3">
@@ -224,6 +234,8 @@ const Home = () => {
                   src="https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=800"
                   alt="Ground Handling"
                   title="Ground Handling"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -245,6 +257,8 @@ const Home = () => {
                   src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=800"
                   alt="Cargo Charters"
                   title="Cargo Charters"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -266,6 +280,8 @@ const Home = () => {
                   src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=800"
                   alt="Secure Warehousing"
                   title="Secure Warehousing"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -287,6 +303,8 @@ const Home = () => {
                   src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800"
                   alt="Global Logistics"
                   title="Global Logistics"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -373,6 +391,8 @@ const Home = () => {
                 <img
                   src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop"
                   alt="Office Building"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-[300px] md:h-[400px] object-cover"
                 />
               </div>
