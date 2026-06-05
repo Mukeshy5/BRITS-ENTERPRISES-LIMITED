@@ -27,7 +27,7 @@ const RequestQuote = () => {
                 href="tel:+447349049886" 
                 className="block py-3 px-6 bg-[#235347] text-[#DAF1DE] rounded-xl font-bold text-sm hover:bg-black transition-colors"
               >
-              07349 049886
+                07349 049886
               </a>
             </div>
 
