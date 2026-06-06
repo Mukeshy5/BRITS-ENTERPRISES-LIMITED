@@ -17,6 +17,18 @@ const Home = () => {
   const trustFullText = "Built on Trust. Driven by Excellence.";
   const trustRef = useRef(null);
 
+  const [valueDisplayText, setValueDisplayText] = useState("");
+  const valueFullText = "Quality. Reliability. Global Reach.";
+  const valueRef = useRef(null);
+
+  const [aviationDisplayText, setAviationDisplayText] = useState("");
+  const aviationFullText = "Aviation & Airport Solutions";
+  const aviationRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     let index = 0;
     let isDeleting = false;
@@ -84,6 +96,25 @@ const Home = () => {
           let i = 0;
           const timer = setInterval(() => {
             i++;
+            setValueDisplayText(valueFullText.slice(0, i));
+            if (i >= valueFullText.length) clearInterval(timer);
+          }, 50);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (valueRef.current) observer.observe(valueRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          let i = 0;
+          const timer = setInterval(() => {
+            i++;
             setTrustDisplayText(trustFullText.slice(0, i));
             if (i >= trustFullText.length) clearInterval(timer);
           }, 50);
@@ -93,6 +124,25 @@ const Home = () => {
       { threshold: 0.1 }
     );
     if (trustRef.current) observer.observe(trustRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          let i = 0;
+          const timer = setInterval(() => {
+            i++;
+            setAviationDisplayText(aviationFullText.slice(0, i));
+            if (i >= aviationFullText.length) clearInterval(timer);
+          }, 50);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (aviationRef.current) observer.observe(aviationRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -126,7 +176,6 @@ const Home = () => {
                 <span className="text-[#8EB69B]">
                   {displayText.slice(18)}
                 </span>
-                <span className="inline-block w-[3px] h-[0.7em] bg-[#8EB69B] ml-1 animate-pulse align-middle"></span>
               </h1>
 
               <div className="w-24 h-[4px] bg-[#8EB69B] mx-auto mb-10 rounded-full"></div>
@@ -170,7 +219,6 @@ const Home = () => {
                 className="text-3xl md:text-4xl font-bold mb-6 text-black tracking-tight min-h-[1.5em]"
               >
                 {businessDisplayText}
-                <span className="inline-block w-[3px] h-[0.7em] bg-[#8EB69B] ml-1 animate-pulse align-middle"></span>
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 Our diverse portfolio bridges efficient global logistics with precise manufacturing craftsmanship, ensuring high standards across all operations.
@@ -279,8 +327,11 @@ const Home = () => {
             <span className="text-[#8EB69B] text-xs font-bold uppercase tracking-widest block mb-3">
               Logistics Excellence
             </span>
-            <h2 className="text-[#235347] text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
-              Aviation & Airport Solutions
+            <h2 
+              ref={aviationRef}
+              className="text-[#235347] text-3xl md:text-5xl font-extrabold leading-tight tracking-tight min-h-[1.5em]"
+            >
+              {aviationDisplayText}
             </h2>
             <div className="w-16 h-1 bg-[#8EB69B] mt-6"></div>
           </div>
@@ -388,9 +439,12 @@ const Home = () => {
             <span className="text-[#8EB69B] text-xs font-bold uppercase tracking-[0.4em] block mb-4">
               Value Proposition
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-[#235347]">
-              Quality. Reliability.{" "}
-              <span className="text-[#8EB69B]">Global Reach.</span>
+            <h2 
+              ref={valueRef}
+              className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-[#235347] min-h-[1.5em]"
+            >
+              {valueDisplayText.slice(0, 22)}
+              <span className="text-[#8EB69B]">{valueDisplayText.slice(22)}</span>
             </h2>
             <div className="w-16 h-1 bg-[#235347] mx-auto"></div>
           </div>
@@ -465,7 +519,6 @@ const Home = () => {
                 {trustDisplayText.slice(0, 16)}
                 {trustDisplayText.length > 16 && <br />}
                 {trustDisplayText.slice(16).trimStart()}
-                <span className="inline-block w-[3px] h-[0.7em] bg-[#8EB69B] ml-1 animate-pulse align-middle"></span>
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Brits Enterprises Limited is committed

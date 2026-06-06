@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+                                                                                                                                                                                                              import React, { useState, useMemo, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const Product = () => {
@@ -57,6 +57,10 @@ const Product = () => {
     "Air Cargo Mobile Banner": "Promotional banner for freight and logistics solutions.",
     "Gold Stud Bracelet": "Elegant bracelet designed for everyday wear."
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Step 2: Create Product Data dynamically from assets folder
   // Dynamically import all images so no asset is left unused
