@@ -1,12 +1,104 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import heroBg from "../assets/hero-bg.jpeg";
 import heroBgMobile from "../assets/mobile.jpeg";
 
 const Home = () => {
+  const [displayText, setDisplayText] = useState("");
+  const [showDesc, setShowDesc] = useState(false);
+  const fullText = "BRITS ENTERPRISES LIMITED";
+  const heroRef = useRef(null);
+
+  const [businessDisplayText, setBusinessDisplayText] = useState("");
+  const businessFullText = "Quality Solutions for Global Markets";
+  const businessRef = useRef(null);
+
+  const [trustDisplayText, setTrustDisplayText] = useState("");
+  const trustFullText = "Built on Trust. Driven by Excellence.";
+  const trustRef = useRef(null);
+
+  useEffect(() => {
+    let index = 0;
+    let isDeleting = false;
+    let timeoutId;
+
+    const animate = () => {
+      setDisplayText(fullText.slice(0, index));
+
+      let speed = isDeleting ? 50 : 100; // Deleting is faster than typing
+
+      if (!isDeleting && index === fullText.length) {
+        speed = 3000; // Stay at full text for 3 seconds before deleting
+        isDeleting = true;
+        setShowDesc(true);
+      } else if (isDeleting && index === 0) {
+        isDeleting = false;
+        speed = 500; // Pause briefly before starting next loop
+      }
+
+      index = isDeleting ? index - 1 : index + 1;
+      timeoutId = setTimeout(animate, speed);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          animate();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (heroRef.current) observer.observe(heroRef.current);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          let i = 0;
+          const timer = setInterval(() => {
+            i++;
+            setBusinessDisplayText(businessFullText.slice(0, i));
+            if (i >= businessFullText.length) clearInterval(timer);
+          }, 50); // Typing speed
+          observer.disconnect(); // Animation runs only once when scrolled into view
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (businessRef.current) observer.observe(businessRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          let i = 0;
+          const timer = setInterval(() => {
+            i++;
+            setTrustDisplayText(trustFullText.slice(0, i));
+            if (i >= trustFullText.length) clearInterval(timer);
+          }, 50);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (trustRef.current) observer.observe(trustRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div>
-      <section className="relative min-h-screen flex flex-col overflow-hidden">
+      <section className="relative min-h-screen flex flex-col overflow-hidden" ref={heroRef}>
         {/* Background */}
         <div className="absolute inset-0">
           <picture className="block w-full h-full">
@@ -18,73 +110,36 @@ const Home = () => {
             />
           </picture>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1d3831] via-[#235347]/90 to-transparent" />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#235347]/60 via-transparent to-[#235347]/80" />
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex-1 flex items-center">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-20">
-            <div className="max-w-3xl">
-              <h1 className="text-[#DAF1DE] font-bold leading-tight text-3xl sm:text-5xl lg:text-6xl tracking-tight">
-                BRITS ENTERPRISES LIMITED
+        <div className="relative z-10 flex-1 flex items-center justify-center">
+          <div className="w-full max-w-7xl mx-auto px-6 py-12 md:py-20 text-center">
+            <div className="max-w-4xl mx-auto">
+              <span className="text-[#8EB69B] text-xs md:text-sm font-bold uppercase tracking-[0.5em] block mb-6 drop-shadow-md">
+                Global Solutions • Premium Excellence
+              </span>
+              <h1 className="text-white font-black leading-tight text-3xl sm:text-5xl lg:text-6xl tracking-tighter mb-8 drop-shadow-2xl min-h-[1.2em]">
+                {displayText.slice(0, 18)}
+                <span className="text-[#8EB69B]">
+                  {displayText.slice(18)}
+                </span>
+                <span className="inline-block w-[3px] h-[0.7em] bg-[#8EB69B] ml-1 animate-pulse align-middle"></span>
               </h1>
 
-              <div className="w-12 h-[3px] bg-[#8EB69B] my-8"></div>
+              <div className="w-24 h-[4px] bg-[#8EB69B] mx-auto mb-10 rounded-full"></div>
 
               <p
-                className="text-[#DAF1DE]/90 leading-relaxed max-w-2xl mb-10 text-base md:text-lg"
+                className={`text-[#DAF1DE] leading-relaxed max-w-3xl mx-auto mb-10 text-base md:text-xl font-medium drop-shadow-lg transition-all duration-1000 ease-out transform ${
+                  showDesc ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                }`}
               >
-                BRITS ENTERPRISES LIMITED is a diversified global enterprise dedicated to delivering excellence 
-                across freight air transport, specialized manufacturing of premium bags and gift boxes, and 
-                professional interior finishes. With a steadfast commitment to reliability and quality, 
-                we bridge international markets and elevate lifestyle standards through our comprehensive 
-                range of tailored services and high-end products.
+                A premier global leader in Freight Air Transport, luxury manufacturing, and professional 
+                architectural finishes. We combine logistics expertise with manufacturing precision 
+                to deliver world-class excellence across international borders.
               </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
-                <a
-                  href="#business"
-                  className="
-              bg-[#8EB69B]
-              text-black
-              font-bold
-              px-8
-              py-4
-              rounded-xl
-              hover:bg-[#DAF1DE] hover:text-[#235347]
-              transition-all duration-300
-              text-center
-              w-full
-              sm:w-auto
-              shadow-lg hover:shadow-[#DAF1DE]/30
-              uppercase text-[11px] tracking-widest
-            "
-                >
-                  OUR BUSINESS →
-                </a>
-
-                <Link
-                  to="/contact"
-                  className="
-              border-2
-              border-[#8EB69B]
-              text-[#DAF1DE]
-              px-8
-              py-4
-              rounded-xl
-              hover:bg-[#8EB69B]
-              hover:text-black
-              transition-all duration-300
-              text-center
-              w-full
-              sm:w-auto
-              font-bold
-              uppercase text-[11px] tracking-widest
-            "
-                >
-                  CONTACT US
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -110,8 +165,12 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4 mb-8 lg:mb-0">
               <span className="text-[#8EB69B] text-sm font-bold uppercase tracking-[0.2em] block mb-4">Our Expertise</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black tracking-tight">
-                Quality Solutions for Global Markets
+              <h2 
+                ref={businessRef}
+                className="text-3xl md:text-4xl font-bold mb-6 text-black tracking-tight min-h-[1.5em]"
+              >
+                {businessDisplayText}
+                <span className="inline-block w-[3px] h-[0.7em] bg-[#8EB69B] ml-1 animate-pulse align-middle"></span>
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 Our diverse portfolio bridges efficient global logistics with precise manufacturing craftsmanship, ensuring high standards across all operations.
@@ -402,10 +461,11 @@ const Home = () => {
               <span className="text-[#235347] text-xs font-bold uppercase tracking-widest block mb-3">
                 About Us
               </span>
-              <h2 className="text-black text-3xl md:text-4xl font-bold leading-tight mb-6">
-                Built on Trust.
-                <br />
-                Driven by Excellence.
+              <h2 className="text-black text-3xl md:text-4xl font-bold leading-tight mb-6 min-h-[2.5em]" ref={trustRef}>
+                {trustDisplayText.slice(0, 16)}
+                {trustDisplayText.length > 16 && <br />}
+                {trustDisplayText.slice(16).trimStart()}
+                <span className="inline-block w-[3px] h-[0.7em] bg-[#8EB69B] ml-1 animate-pulse align-middle"></span>
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Brits Enterprises Limited is committed
