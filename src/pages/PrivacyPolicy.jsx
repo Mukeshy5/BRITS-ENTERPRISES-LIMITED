@@ -62,7 +62,7 @@ const PrivacyPolicy = () => {
               <div className="space-y-4 font-medium relative z-10">
                 <div className="flex items-center gap-3">
                   <span className="text-[#8EB69B]">✉️</span>
-                  <a href="mailto:info@britsenterprises.co.uk" className="hover:text-[#8EB69B] transition-colors">info@britsenterprises.co.uk</a>
+                  <a href="mailto:contact@britsenterprisesltd.co.uk" className="hover:text-[#8EB69B] transition-colors">contact@britsenterprisesltd.co.uk</a>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-[#8EB69B]">📞</span>

@@ -43,10 +43,10 @@ const RequestQuote = () => {
               <h3 className="text-xl font-bold text-black mb-2 uppercase tracking-wider">Email Us</h3>
               <p className="text-gray-500 text-sm mb-6">Send us your project requirements.</p>
               <a 
-                href="mailto:info@britsenterprises.co.uk" 
+                href="mailto:contact@britsenterprisesltd.co.uk" 
                 className="block py-3 px-6 bg-[#235347] text-[#DAF1DE] rounded-xl font-bold text-sm hover:bg-black transition-colors"
               >
-                info@britsenterprises.co.uk
+                contact@britsenterprisesltd.co.uk
               </a>
             </div>
 

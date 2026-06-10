@@ -89,7 +89,7 @@ const Footer = () => {
              
               <div className="flex items-center gap-3 group">
                 <span className="text-[#8EB69B]">📩</span>
-                <a href="mailto:info@britsenterprises.co.uk" className="group-hover:text-white transition-colors">info@britsenterprises.co.uk</a>
+                <a href="mailto:contact@britsenterprisesltd.co.uk" className="group-hover:text-white transition-colors">contact@britsenterprisesltd.co.uk</a>
               </div>
             </div>
           </div>
