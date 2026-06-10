@@ -55,7 +55,26 @@ const Product = () => {
     "Air Freight Logistics Service": "Fast and reliable international cargo transportation.",
     "Aircraft Logistics Banner": "Professional visual representing air cargo services.",
     "Air Cargo Mobile Banner": "Promotional banner for freight and logistics solutions.",
-    "Gold Stud Bracelet": "Elegant bracelet designed for everyday wear."
+    "Gold Stud Bracelet": "Elegant bracelet designed for everyday wear.",
+    "Safety Helmet": "Durable industrial safety helmet designed to protect the head from impact, falling objects, and workplace hazards. Ideal for construction, manufacturing, and industrial environments.",
+    "Safety Goggles": "High-quality safety goggles that provide reliable eye protection against dust, debris, chemicals, and flying particles while ensuring clear visibility.",
+    "Reflective Safety Jacket": "Lightweight reflective safety jacket with high-visibility strips for enhanced worker visibility in low-light and hazardous work conditions.",
+    "Rubber Electrical Gloves": "Insulated rubber gloves designed to protect workers from electrical shocks and high-voltage hazards during electrical maintenance and operations.",
+    "Pvc Coated Safety Gloves": "Durable PVC-coated gloves offering excellent grip and protection against abrasions, oils, chemicals, and general industrial handling tasks.",
+    "PVC Coated Safety Gloves": "Durable PVC-coated gloves offering excellent grip and protection against abrasions, oils, chemicals, and general industrial handling tasks.",
+    "Safety Shoes": "Heavy-duty safety shoes with reinforced toe protection and anti-slip soles, ensuring maximum foot safety in industrial and construction workplaces.",
+    "Ear Protection Earplugs": "Comfortable and effective earplugs designed to reduce noise exposure and protect hearing in loud industrial and construction environments.",
+    "Face Shield": "Transparent face shield providing full-face protection against sparks, chemical splashes, dust, and airborne particles while maintaining visibility.",
+    "Dust Mask": "Protective dust mask designed to filter airborne dust, dirt, and non-toxic particles, ensuring safer breathing in dusty work environments.",
+    "N95 Respirator Mask": "Certified N95 respirator mask offering advanced filtration against airborne particles, pollutants, and harmful contaminants for respiratory protection.",
+    "Safety Harness": "Full-body safety harness engineered to prevent falls and ensure worker safety during height-related tasks in construction and maintenance projects.",
+    "Safety Belt": "Reliable safety belt designed for positioning support and fall protection, helping workers maintain stability while working at elevated heights.",
+    "Welding Safety Gloves": "Heat-resistant welding gloves that protect hands from sparks, molten metal splashes, heat, and mechanical hazards during welding operations.",
+    "Industrial Rain Suit": "Waterproof industrial rain suit providing complete protection from rain, moisture, and harsh weather conditions during outdoor work activities.",
+    "Fire Resistant Coverall": "Premium fire-resistant coverall designed to protect workers from flames, heat exposure, and flash fire hazards in industrial environments.",
+    "Safety Cones": "Highly visible safety cones used for traffic control, hazard marking, and restricted area identification at construction and industrial sites.",
+    "Warning Tape": "Brightly colored warning tape used to mark hazardous areas, restrict access, and improve workplace safety and site organization.",
+    "High Visibility Vest": "Fluorescent high-visibility vest with reflective strips that enhances worker visibility and safety in construction, roadwork, and industrial areas."
   };
 
   useEffect(() => {
@@ -104,6 +123,9 @@ const Product = () => {
     } else if (t.includes('INTERIOR') || t.includes('WALL') || t.includes('DECOR') || t.includes('PAINTING')) {
       category = 'INTERIOR';
       if (!specificDesc) baseDesc = 'Professional interior painting and decorative wall finishes for high-end residential and commercial spaces.';
+    } else if (t.includes('SAFETY') || t.includes('HELMET') || t.includes('GOGGLES') || t.includes('GLOVES') || t.includes('MASK') || t.includes('SHIELD') || t.includes('HARNESS') || t.includes('VEST') || t.includes('CONES') || t.includes('TAPE') || t.includes('COVERALL') || t.includes('SUIT') || t.includes('SHOES') || t.includes('EARPLUGS') || t.includes('RESPIRATOR')) {
+      category = 'SAFETY EQUIPMENT';
+      if (!specificDesc) baseDesc = 'High-quality industrial safety gear and personal protective equipment (PPE) for hazard protection.';
     }
 
     return { category, description: baseDesc };
