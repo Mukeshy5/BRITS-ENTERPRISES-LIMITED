@@ -185,7 +185,7 @@ const Home = () => {
                   showDesc ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >
-                A premier global leader in Freight Air Transport, luxury manufacturing, and professional 
+                A premier global leader in Road Freight Transport, luxury manufacturing, and professional 
                 architectural finishes. We combine logistics expertise with manufacturing precision 
                 to deliver world-class excellence across international borders.
               </p>
@@ -197,7 +197,7 @@ const Home = () => {
         <div className="relative z-20 bg-[#235347]/95 border-t border-[#8EB69B]/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 text-center">
             <p className="text-[#DAF1DE]/80 text-sm md:text-base leading-relaxed max-w-5xl mx-auto">
-              Specializing in Freight Air Transport, premium Bag manufacturing (Tote, Shopping, and Hand Bags), 
+              Specializing in Road Freight Transport, premium Bag manufacturing (Tote, Shopping, and Hand Bags), 
               Jewellery and Decorative Gift Boxes, and professional Interior painting and Wall Finishes.
             </p>
             <div className="flex justify-center mt-4">
@@ -236,19 +236,19 @@ const Home = () => {
               <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-500 group">
                 <div className="h-52 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800"
+                    src="https://images.unsplash.com/photo-1572911130612-40f4b3602d1d?q=80&w=800"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                     decoding="async"
-                    alt="Freight Air Transport"
+                    alt="Road Freight Transport"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-black">
-                    Freight Air Transport
+                    Road Freight Transport
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    Reliable air cargo solutions providing efficient transportation for goods across global supply chains and major international hubs.
+                    Reliable road cargo solutions providing efficient transportation for goods across domestic and international supply chains.
                   </p>
                 </div>
               </div>

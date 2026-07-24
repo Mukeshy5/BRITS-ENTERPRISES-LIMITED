@@ -48,7 +48,7 @@ const AboutUs = () => {
               </div>
 
               <p className="text-gray-600 text-lg leading-relaxed">
-                Brits Enterprises Limited is a diversified company operating across four core sectors: specialized freight air transport, premium bag manufacturing (Tote, Shopping, and Hand Bags), luxury jewellery and gift packaging, and professional interior wall finishes and painting.
+                Brits Enterprises Limited is a diversified company operating across four core sectors: specialized road freight transport, premium bag manufacturing (Tote, Shopping, and Hand Bags), luxury jewellery and gift packaging, and professional interior wall finishes and painting.
               </p>
               
               <p className="text-gray-600 text-lg leading-relaxed">
