@@ -52,9 +52,7 @@ const Product = () => {
     "Classic Living Room Wall Painting": "Timeless wall art for home décor.",
     "Modern Interior Wall Decor Set": "Coordinated wall décor collection.",
     "Vintage Garden Bench": "Decorative outdoor bench with classic design.",
-    "Air Freight Logistics Service": "Fast and reliable international cargo transportation.",
-    "Aircraft Logistics Banner": "Professional visual representing air cargo services.",
-    "Air Cargo Mobile Banner": "Promotional banner for freight and logistics solutions.",
+    "Road Freight Logistics Service": "Fast and reliable road cargo transportation.",
     "Gold Stud Bracelet": "Elegant bracelet designed for everyday wear.",
     "Safety Helmet": "Durable industrial safety helmet designed to protect the head from impact, falling objects, and workplace hazards. Ideal for construction, manufacturing, and industrial environments.",
     "Safety Goggles": "High-quality safety goggles that provide reliable eye protection against dust, debris, chemicals, and flying particles while ensuring clear visibility.",
@@ -89,11 +87,8 @@ const Product = () => {
   const analyzeImageContent = (fileName) => {
     const fn = fileName.toLowerCase();
     
-    // Specific mappings for major services
-    if (fn.includes('freight') || fn.includes('cargo')) return "Air Freight Transport";
-    if (fn.includes('warehouse')) return "Secure Warehousing";
-    if (fn.includes('handling')) return "Ground Handling Services";
-    if (fn.includes('charter')) return "Cargo Charter Solutions";
+    // Specific mappings for major services - updated for road freight services
+    if (fn.includes('freight') || fn.includes('cargo')) return "Road Freight Services";
 
     // For specific products, generate a clean title from the filename
     return fileName.split(/[-_ ]/).filter(Boolean)
@@ -109,11 +104,8 @@ const Product = () => {
     let baseDesc = specificDesc || 'A curated selection representing our global standards of quality and business trust.';
 
     if (t.includes('FREIGHT') || t.includes('CARGO') || t.includes('WAREHOUSE') || t.includes('TRANSPORT') || t.includes('LOGISTICS')) {
-      category = 'LOGISTICS';
-      if (!specificDesc) baseDesc = 'Expert global logistics and freight solutions engineered for reliability and supply chain efficiency.';
-    } else if (t.includes('AVIATION') || t.includes('GROUND')) {
-      category = 'AVIATION';
-      if (!specificDesc) baseDesc = 'Precision aviation support and airport services delivering world-class reliability for global operations.';
+      category = 'ROAD FREIGHT';
+      if (!specificDesc) baseDesc = 'Expert road freight services engineered for reliability, speed, and efficient cargo movement.';
     } else if (t.includes('BAG') || t.includes('HANDBAG') || t.includes('TOTE') || t.includes('PURSE') || t.includes('SHOPPER') || t.includes('JEWELRY')) {
       category = 'BAGS';
       if (!specificDesc) baseDesc = 'Premium Tote, Shopping, and Hand bags crafted with durable materials and professional design.';
@@ -167,7 +159,7 @@ const Product = () => {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Our Products & Services</h1>
           <p className="text-[#DAF1DE]/80 max-w-2xl mx-auto font-medium text-sm md:text-base">
-            Delivering excellence across the world through our diverse range of premium products and specialized global services.
+            Delivering excellence across the world through our diverse range of premium products and specialized road freight services.
           </p>
         </div>
       </header>

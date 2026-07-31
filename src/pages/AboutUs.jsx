@@ -15,7 +15,7 @@ const AboutUs = () => {
           <span className="text-[#8EB69B] text-xs font-bold uppercase tracking-[0.2em] block mb-4">Corporate Overview</span>
           <h1 className="text-3xl md:text-5xl font-bold text-black mb-6 tracking-tight">Our Business Identity</h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed">
-            A global enterprise focused on reliable freight solutions and high-quality product manufacturing.
+            A global enterprise focused on reliable road freight services, logistics solutions, and professional cargo handling.
           </p>
         </div>
       </header>
@@ -48,11 +48,11 @@ const AboutUs = () => {
               </div>
 
               <p className="text-gray-600 text-lg leading-relaxed">
-                Brits Enterprises Limited is a diversified company operating across four core sectors: specialized road freight transport, premium bag manufacturing (Tote, Shopping, and Hand Bags), luxury jewellery and gift packaging, and professional interior wall finishes and painting.
+                Brits Enterprises Limited is a diversified company operating across core sectors including specialized road freight services, cargo coordination, commercial support, and trusted logistics execution.
               </p>
               
               <p className="text-gray-600 text-lg leading-relaxed">
-                Our business model is built on the principles of reliability and quality. Whether we are managing international air cargo or providing decorative wall finishes, we ensure that every service meets the realistic needs of our clients.
+                Our business model is built on reliability and quality. Whether we are managing domestic cargo movements or coordinating complex logistics, we ensure every service meets the practical needs of our clients.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 border-t border-gray-100">
@@ -104,7 +104,7 @@ const AboutUs = () => {
               <div className="absolute top-[-20px] right-[-20px] text-9xl text-gray-50 font-serif group-hover:scale-110 transition-transform duration-700">M</div>
               <h3 className="text-[#235347] text-3xl font-bold mb-6">Our Mission</h3>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To bridge global markets through innovative freight solutions while enriching lifestyles with premium products that define elegance and durability. We aim to be the most trusted partner for businesses and individuals seeking excellence.
+                To bridge global markets through innovative road freight and logistics solutions while delivering dependable service and professional cargo support. We aim to be the most trusted partner for businesses seeking speed, accuracy, and excellence.
               </p>
             </div>
 
@@ -131,7 +131,7 @@ const AboutUs = () => {
             {[
               { icon: "🛡️", title: "Unwavering Integrity", desc: "We operate with full transparency, ensuring that our professional status translates into global trust." },
               { icon: "✨", title: "Premium Quality", desc: "From wall finishes to luxury gift boxes, we don't settle for anything less than perfection." },
-              { icon: "🌍", title: "Global Sustainability", desc: "Optimizing logistics routes and selecting eco-friendly materials for our lifestyle range." }
+              { icon: "🌍", title: "Global Sustainability", desc: "Optimizing freight routes and supporting efficient, responsible logistics operations." }
             ].map((value, i) => (
               <div key={i} className="p-10 bg-white border border-gray-100 rounded-2xl text-center hover:border-[#235347] transition-colors group">
                 <div className="text-4xl sm:text-5xl mb-6 group-hover:scale-110 transition-transform">{value.icon}</div>

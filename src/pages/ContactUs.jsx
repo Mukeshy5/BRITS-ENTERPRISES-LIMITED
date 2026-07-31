@@ -11,7 +11,7 @@ const ContactUs = () => {
           <span className="text-[#235347] text-xs font-bold uppercase tracking-[0.4em] block mb-4 relative z-10">Get In Touch</span>
           <h1 className="text-3xl md:text-6xl font-bold text-[#235347] mb-6 relative z-10">Connect With Us</h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg font-medium leading-relaxed relative z-10">
-            Have a question or looking for a partnership? Our team is here to help you with global logistics and premium solutions.
+            Have a question or looking for a partnership? Our team is here to help with road freight services, logistics, and cargo support.
           </p>
         </div>
       </section>
@@ -35,7 +35,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg text-black">Our Address</h4>
-                    <p className="text-gray-600">Stanley House, Kelvin Way, Crawley, England RH10 9SE</p>
+                    <p className="text-gray-600">87 Bury Road, London, England, N22 6HS</p>
                   </div>
                 </div>
 
@@ -66,7 +66,7 @@ const ContactUs = () => {
             {/* Right Column: Google Map */}
             <div className="w-full h-[400px] lg:min-h-[600px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.353386050186!2d-0.1770425!3d51.1148815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875f10a8d39f60f%3A0xc64e1c27c1a843e!2sKelvin%20Way%2C%20Crawley%20RH10%209SE%2C%20UK!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s"
+                src="https://www.google.com/maps?q=87+Bury+Road,+London,+England,+N22+6HS&z=14&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

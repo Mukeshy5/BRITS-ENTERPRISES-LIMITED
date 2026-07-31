@@ -84,7 +84,7 @@ const Footer = () => {
             <div className="space-y-4 text-[13px] text-[#DAF1DE]/80">
               <div className="flex gap-3 items-start">
                 <span className="text-[#8EB69B] mt-0.5">📍</span>
-                <p className="leading-relaxed">Stanley House, Kelvin Way, Crawley</p>
+                <p className="leading-relaxed">87 Bury Road, London, England, N22 6HS</p>
               </div>
              
               <div className="flex items-center gap-3 group">

@@ -12,7 +12,7 @@ const RequestQuote = () => {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-6xl font-bold text-[#235347] mb-6">Enquire Now</h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg font-medium">
-            Interested in our premium products or global logistics services? Reach out to us directly for a customized quote and expert assistance.
+            Interested in our road freight logistics or cargo support services? Reach out to us directly for a customized quote and expert assistance.
           </p>
         </div>
       </header>
@@ -68,7 +68,7 @@ const RequestQuote = () => {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h4 className="text-black font-bold text-2xl mb-4">Trusted by Businesses Globally</h4>
           <p className="text-gray-500 max-w-xl mx-auto">
-            Brits Enterprises Limited provides seamless solutions tailored to your professional needs. Join our network of satisfied clients today.
+            Brits Enterprises Limited provides seamless road freight solutions tailored to your professional cargo needs. Join our network of satisfied clients today.
           </p>
         </div>
       </section>

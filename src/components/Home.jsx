@@ -21,8 +21,8 @@ const Home = () => {
   const valueFullText = "Quality. Reliability. Global Reach.";
   const valueRef = useRef(null);
 
-  const [aviationDisplayText, setAviationDisplayText] = useState("");
-  const aviationFullText = "Aviation & Airport Solutions";
+  const [roadFreightDisplayText, setRoadFreightDisplayText] = useState("");
+  const roadFreightFullText = "Road Freight Services";
   const aviationRef = useRef(null);
 
   useEffect(() => {
@@ -134,8 +134,8 @@ const Home = () => {
           let i = 0;
           const timer = setInterval(() => {
             i++;
-            setAviationDisplayText(aviationFullText.slice(0, i));
-            if (i >= aviationFullText.length) clearInterval(timer);
+            setRoadFreightDisplayText(roadFreightFullText.slice(0, i));
+            if (i >= roadFreightFullText.length) clearInterval(timer);
           }, 50);
           observer.disconnect();
         }
@@ -155,7 +155,7 @@ const Home = () => {
             <source media="(max-width:768px)" srcSet={heroBgMobile} />
             <img
               src={heroBg}
-              alt="Air Cargo Background"
+              alt="Road Freight Background"
               className="w-full h-full object-cover"
             />
           </picture>
@@ -185,9 +185,7 @@ const Home = () => {
                   showDesc ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >
-                A premier global leader in Road Freight Transport, luxury manufacturing, and professional 
-                architectural finishes. We combine logistics expertise with manufacturing precision 
-                to deliver world-class excellence across international borders.
+                A premier provider of road freight logistics, cargo transport, and reliable goods movement. We combine dependable fleet operations with secure freight coordination to deliver seamless delivery across major road networks.
               </p>
             </div>
           </div>
@@ -197,8 +195,7 @@ const Home = () => {
         <div className="relative z-20 bg-[#235347]/95 border-t border-[#8EB69B]/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 text-center">
             <p className="text-[#DAF1DE]/80 text-sm md:text-base leading-relaxed max-w-5xl mx-auto">
-              Specializing in Road Freight Transport, premium Bag manufacturing (Tote, Shopping, and Hand Bags), 
-              Jewellery and Decorative Gift Boxes, and professional Interior painting and Wall Finishes.
+              Specializing in road freight transport, cargo consolidation, customs support, and dependable logistics solutions for business and commercial shipments.
             </p>
             <div className="flex justify-center mt-4">
               <Link to="/about" className="text-[#8EB69B] hover:text-white transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">
@@ -221,7 +218,7 @@ const Home = () => {
                 {businessDisplayText}
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Our diverse portfolio bridges efficient global logistics with precise manufacturing craftsmanship, ensuring high standards across all operations.
+                Our diverse portfolio bridges efficient road freight operations with dependable logistics coordination, ensuring high standards across every shipment.
               </p>
               <Link
                 to="/products"
@@ -236,19 +233,20 @@ const Home = () => {
               <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-500 group">
                 <div className="h-52 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1572911130612-40f4b3602d1d?q=80&w=800"
+                    // src="https://www.shutterstock.com/image-photo/container-shipping-orange-color-truckload-harbor-2230233711?trackingId=f2cbf20b-e071-48b5-a9ac-4e9f489fcb89&listId=searchResults"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtnaxAvHU44WuhfyK9AWFp0fKS48LpG5oF1LhUo_rIfA&s=10"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                     decoding="async"
-                    alt="Road Freight Transport"
+                    alt="Road Freight Services"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-black">
-                    Road Freight Transport
+                    Modern Interior Design
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    Reliable road cargo solutions providing efficient transportation for goods across domestic and international supply chains.
+                    Create stunning and functional interiors with our premium design services.
                   </p>
                 </div>
               </div>
@@ -261,15 +259,15 @@ const Home = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                     decoding="async"
-                    alt="Tote Bags / Shopping Bags"
+                    alt="Freight Consolidation"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-black">
-                    Tote, Shopping & Hand Bags
+                    Custom Bag Collection
                   </h3>
                   <p className="text-gray-600 text-sm italic">
-                    Premium collection of bags crafted with durable materials for professional and daily use.
+                    Personalized handbags and tote bags tailored to your brand or personal preferences, delivering unique designs with exceptional quality..
                   </p>
                 </div>
               </div>
@@ -282,15 +280,15 @@ const Home = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                     decoding="async"
-                    alt="Jewellery Box / Gift Boxes"
+                    alt="Customs & Documentation Support"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-black">
-                    Jewellery & Decorative Gift Boxes
+                    Fashion Accessories
                   </h3>
                   <p className="text-gray-600 text-sm italic">
-                    Elegant decorative packaging designed for high-quality presentation and secure storage.
+                    Enhance your style with our exclusive collection of fashion accessories, designed to complement every outfit with elegance and sophistication..
                   </p>
                 </div>
               </div>
@@ -303,15 +301,15 @@ const Home = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                     decoding="async"
-                    alt="Interior Decorative Painting"
+                    alt="Global Freight Network"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-black">
-                    Interior Painting & Wall Finishes
+                    Space Planning & Layout
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    Professional interior use painting and decorative wall finishes that enhance the aesthetic and value of modern spaces.
+                    Smart space planning solutions that maximize functionality, improve movement, and create balanced, efficient interiors..
                   </p>
                 </div>
               </div>
@@ -320,30 +318,31 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Aviation & Airport Services Section */}
+      {/* Road Freight Services Section */}
       <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
             <span className="text-[#8EB69B] text-xs font-bold uppercase tracking-widest block mb-3">
               Logistics Excellence
             </span>
-            <h2 
+            <h2
               ref={aviationRef}
               className="text-[#235347] text-3xl md:text-5xl font-extrabold leading-tight tracking-tight min-h-[1.5em]"
             >
-              {aviationDisplayText}
+              {roadFreightDisplayText}
             </h2>
             <div className="w-16 h-1 bg-[#8EB69B] mt-6"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Ground Handling */}
+            {/* Full Truckload (FTL) */}
             <div className="bg-white shadow-lg rounded-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100">
               <div className="h-56 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=800"
-                  alt="Ground Handling"
-                  title="Ground Handling"
+                  src="https://media.istockphoto.com/id/1417893026/photo/a-truck-with-a-tilt-semi-trailer-transports-cargo-against-the-backdrop-of-a-sunset-in-the.jpg?s=612x612&w=0&k=20&c=tH9ljwokrXEk49frHb25-BpJuyotojgM98jBjQpUTH0="
+                  
+                  alt="Full Truckload (FTL)"
+                  title="Full Truckload (FTL)"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -351,22 +350,21 @@ const Home = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-semibold mb-3 text-black">
-                  Ground Handling
+                  Full Truckload (FTL)
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Professional ramp and terminal support services for
-                  international aircraft operations.
+                  Dedicated full truckload services for fast, secure transport of goods directly from origin to destination.
                 </p>
               </div>
             </div>
 
-            {/* Cargo Charters */}
+            {/* Less-Than-Truckload (LTL) */}
             <div className="bg-white shadow-lg rounded-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100">
               <div className="h-56 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=800"
-                  alt="Cargo Charters"
-                  title="Cargo Charters"
+                  src="https://media.istockphoto.com/id/1212404028/photo/long-haul-semi-truck-on-a-rural-western-usa-interstate-highway.jpg?s=612x612&w=0&k=20&c=UYShzXKX8u6HfuxW_kLoFJM54pl7BdwsKkjPtZdMyPY="
+                  alt="Less-Than-Truckload (LTL)"
+                  title="Less-Than-Truckload (LTL)"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -374,11 +372,10 @@ const Home = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-semibold mb-3 text-black">
-                  Cargo Charters
+                  Less-Than-Truckload (LTL)
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Bespoke charter solutions for time-sensitive, oversized, and
-                  specialized cargo shipments.
+                  Cost-effective solutions for smaller shipments that combine cargo efficiently for timely road movement.
                 </p>
               </div>
             </div>
@@ -387,9 +384,9 @@ const Home = () => {
             <div className="bg-white shadow-lg rounded-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100">
               <div className="h-56 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=800"
-                  alt="Secure Warehousing"
-                  title="Secure Warehousing"
+                  src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800"
+                  alt="Customs Coordination"
+                  title="Customs Coordination"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -397,11 +394,10 @@ const Home = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-semibold mb-3 text-black">
-                  Secure Warehousing
+                  Customs Coordination
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  High-security on-airport storage facilities with advanced
-                  inventory management.
+                  High-accuracy customs handling and documentation support to keep cargo moving without delays.
                 </p>
               </div>
             </div>
@@ -410,9 +406,9 @@ const Home = () => {
             <div className="bg-white shadow-lg rounded-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100">
               <div className="h-56 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800"
-                  alt="Global Logistics"
-                  title="Global Logistics"
+                  src="https://media.istockphoto.com/id/2102523384/photo/long-haul-semi-truck-on-a-western-usa-interstate-highway.jpg?s=612x612&w=0&k=20&c=oN5oHVKnALFH3cJlxMQsn0TYuKMbE06b3omldd8-Bvo="
+                  alt="Global Road Freight Routes"
+                  title="Global Road Freight Routes"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -420,11 +416,10 @@ const Home = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-semibold mb-3 text-black">
-                  Global Logistics
+                  Global Road Freight Routes
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Integrated supply chain management connecting major global
-                  airport hubs.
+                  Integrated road logistics coordination connecting major domestic and international trade hubs.
                 </p>
               </div>
             </div>
@@ -468,7 +463,7 @@ const Home = () => {
               },
               {
                 title: "Diverse Range",
-                desc: "Expertise in freight, lifestyle, and interiors.",
+                desc: "Expertise in road freight services, logistics operations, and cargo solutions.",
                 icon: "📦",
               },
               {
@@ -522,8 +517,8 @@ const Home = () => {
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Brits Enterprises Limited is committed
-                to delivering world-class solutions in air freight, premium
-                products and interior services.
+                to delivering world-class solutions in road freight services, logistics,
+                and cargo operations.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed mb-8">
                 Our mission is to combine quality, innovation and reliability to

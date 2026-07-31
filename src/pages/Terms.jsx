@@ -55,7 +55,7 @@ const Terms = () => {
                   07349 049886
                 </a>
               </p>
-              <p>Address: Stanley House, Kelvin Way, Crawley, England RH10 9SE</p>
+              <p>Address: 87 Bury Road, London, England, N22 6HS</p>
             </div>
           </div>
         </div>
