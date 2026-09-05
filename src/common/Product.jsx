@@ -1,4 +1,4 @@
-                                                                                                                                                                                                              import React, { useState, useMemo, useEffect } from 'react'
+                                                                                                                                                                                                              import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const Product = () => {
@@ -52,7 +52,6 @@ const Product = () => {
     "Classic Living Room Wall Painting": "Timeless wall art for home décor.",
     "Modern Interior Wall Decor Set": "Coordinated wall décor collection.",
     "Vintage Garden Bench": "Decorative outdoor bench with classic design.",
-    "Road Freight Logistics Service": "Fast and reliable road cargo transportation.",
     "Gold Stud Bracelet": "Elegant bracelet designed for everyday wear.",
     "Safety Helmet": "Durable industrial safety helmet designed to protect the head from impact, falling objects, and workplace hazards. Ideal for construction, manufacturing, and industrial environments.",
     "Safety Goggles": "High-quality safety goggles that provide reliable eye protection against dust, debris, chemicals, and flying particles while ensuring clear visibility.",
@@ -75,21 +74,75 @@ const Product = () => {
     "High Visibility Vest": "Fluorescent high-visibility vest with reflective strips that enhances worker visibility and safety in construction, roadwork, and industrial areas."
   };
 
+  const safetyProductDetails = {
+    "WhatsApp Image 2026-09-04 at 6.20.21 PM": {
+      name: "Hi-Vis Reflective Rain Jacket",
+      description: "High-visibility waterproof jacket with reflective strips, hood and full sleeves, designed for outdoor, road and construction work."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.20 PM (1)": {
+      name: "Reflective Winter Safety Jacket",
+      description: "Warm high-visibility safety jacket with reflective bands, suitable for cold-weather construction and industrial work."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.20 PM": {
+      name: "Black Reflective Work Jacket",
+      description: "Heavy-duty black work jacket featuring high-visibility reflective strips for improved worker visibility and safety."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.19 PM (2)": {
+      name: "Hi-Vis Reflective Bomber Jacket",
+      description: "Fluorescent safety jacket with orange and silver reflective bands, suitable for road, construction and industrial workers."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.19 PM (1)": {
+      name: "High Visibility Safety Vest",
+      description: "Lightweight fluorescent safety vest with reflective strips for enhanced visibility in low-light and hazardous work areas."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.19 PM": {
+      name: "Reflective Workwear Set",
+      description: "High-visibility orange and black sweatshirt with matching reflective work trousers for industrial and outdoor applications."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.18 PM": {
+      name: "Reflective Winter Workwear Set",
+      description: "High-visibility jacket and trousers set with reflective bands, designed for outdoor work in cold and low-visibility conditions."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.17 PM (1)": {
+      name: "Hi-Vis Reflective Coverall",
+      description: "Full-body orange and black safety coverall with reflective detailing, suitable for construction, utility and industrial workers."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.17 PM": {
+      name: "High Visibility Workwear Set",
+      description: "Fluorescent yellow and black jacket-trouser set with reflective panels for enhanced workplace visibility and protection."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.16 PM (3)": {
+      name: "Hi-Vis Reflective Polo T-Shirt",
+      description: "Fluorescent yellow polo shirt with reflective bands, designed for comfortable daily use in construction and industrial environments."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.16 PM (2)": {
+      name: "Orange Reflective Polo T-Shirt",
+      description: "High-visibility orange polo shirt with a reflective horizontal band, suitable for workers requiring increased visibility."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.16 PM (1)": {
+      name: "Orange Hi-Vis Safety Polo",
+      description: "Bright orange safety polo shirt with reflective striping, suitable for warehouse, construction and outdoor work."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.16 PM": {
+      name: "Yellow Reflective Safety T-Shirt",
+      description: "Fluorescent yellow T-shirt with reflective bands for improved visibility and comfortable use during industrial and outdoor activities."
+    },
+    "WhatsApp Image 2026-09-04 at 6.20.15 PM": {
+      name: "Hi-Vis Safety Jacket Set",
+      description: "Fluorescent yellow and black safety jacket with reflective bands, designed for workers in construction and industrial environments."
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   // Step 2: Create Product Data dynamically from assets folder
   // Dynamically import all images so no asset is left unused
-  const imageModules = import.meta.glob('../assets/*.{png,jpg,jpeg,svg,webp}', { eager: true });
+  const imageModules = import.meta.glob('../assets/*.{avif,png,jpg,jpeg,svg,webp}', { eager: true });
 
   // Auto-analysis logic to generate meaningful titles based on image content (keywords)
   const analyzeImageContent = (fileName) => {
-    const fn = fileName.toLowerCase();
-    
-    // Specific mappings for major services - updated for road freight services
-    if (fn.includes('freight') || fn.includes('cargo')) return "Road Freight Services";
-
     // For specific products, generate a clean title from the filename
     return fileName.split(/[-_ ]/).filter(Boolean)
       .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
@@ -103,10 +156,7 @@ const Product = () => {
     const specificDesc = descriptionsMap[title];
     let baseDesc = specificDesc || 'A curated selection representing our global standards of quality and business trust.';
 
-    if (t.includes('FREIGHT') || t.includes('CARGO') || t.includes('WAREHOUSE') || t.includes('TRANSPORT') || t.includes('LOGISTICS')) {
-      category = 'ROAD FREIGHT';
-      if (!specificDesc) baseDesc = 'Expert road freight services engineered for reliability, speed, and efficient cargo movement.';
-    } else if (t.includes('BAG') || t.includes('HANDBAG') || t.includes('TOTE') || t.includes('PURSE') || t.includes('SHOPPER') || t.includes('JEWELRY')) {
+    if (t.includes('BAG') || t.includes('HANDBAG') || t.includes('TOTE') || t.includes('PURSE') || t.includes('SHOPPER') || t.includes('JEWELRY')) {
       category = 'BAGS';
       if (!specificDesc) baseDesc = 'Premium Tote, Shopping, and Hand bags crafted with durable materials and professional design.';
     } else if (t.includes('BOX') || t.includes('PACKAGING') || t.includes('GIFT')) {
@@ -124,7 +174,7 @@ const Product = () => {
   };
 
   // Memoize product list generation to avoid recalculating on search filter
-  const products = useMemo(() => Object.entries(imageModules)
+  const products = Object.entries(imageModules)
     // Filter out branding assets like logo to ensure only products are shown
     .filter(([path]) => 
       !path.toLowerCase().includes('logo') && 
@@ -135,17 +185,19 @@ const Product = () => {
     )
     .map(([path, module], index) => {
       const fileName = path.split('/').pop().replace(/\.[^/.]+$/, "");
-      const name = analyzeImageContent(fileName);
-      const { category, description } = getProductInsights(name);
+      const details = safetyProductDetails[fileName];
+      const name = details?.name || analyzeImageContent(fileName);
+      const { category, description } = details || getProductInsights(name);
 
       return {
         id: index + 1,
+        fileName,
         name: name,
         image: module.default || module,
         category: category,
         description: description
       };
-    }), [imageModules]);
+    });
 
   // Step 3: Requirements - Case-insensitive real-time search by product title
   const filteredProducts = products.filter(product =>
@@ -157,9 +209,9 @@ const Product = () => {
       {/* Page Header */}
       <header className="bg-[#235347] text-[#DAF1DE] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Our Products & Services</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Our Products</h1>
           <p className="text-[#DAF1DE]/80 max-w-2xl mx-auto font-medium text-sm md:text-base">
-            Delivering excellence across the world through our diverse range of premium products and specialized road freight services.
+            Explore our diverse range of premium products for workplaces, businesses and everyday use.
           </p>
         </div>
       </header>

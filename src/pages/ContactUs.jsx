@@ -1,4 +1,3 @@
-import React from 'react'
 
 const ContactUs = () => {
   return (
@@ -11,7 +10,7 @@ const ContactUs = () => {
           <span className="text-[#235347] text-xs font-bold uppercase tracking-[0.4em] block mb-4 relative z-10">Get In Touch</span>
           <h1 className="text-3xl md:text-6xl font-bold text-[#235347] mb-6 relative z-10">Connect With Us</h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg font-medium leading-relaxed relative z-10">
-            Have a question or looking for a partnership? Our team is here to help with road freight services, logistics, and cargo support.
+            Have a question or looking for a partnership? Our team is here to help with interior design, safety clothes and product support.
           </p>
         </div>
       </section>

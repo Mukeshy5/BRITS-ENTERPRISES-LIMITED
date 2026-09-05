@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 const RequestQuote = () => {
   useEffect(() => {
@@ -12,7 +12,7 @@ const RequestQuote = () => {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-6xl font-bold text-[#235347] mb-6">Enquire Now</h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg font-medium">
-            Interested in our road freight logistics or cargo support services? Reach out to us directly for a customized quote and expert assistance.
+            Interested in our interior design or safety clothes solutions? Reach out to us directly for a customized quote and expert assistance.
           </p>
         </div>
       </header>
@@ -26,7 +26,7 @@ const RequestQuote = () => {
                 <span className="text-4xl group-hover:scale-110 transition-transform">📞</span>
               </div>
               <h3 className="text-xl font-bold text-black mb-2 uppercase tracking-wider">Call Us</h3>
-              <p className="text-gray-500 text-sm mb-6">Available for immediate logistics support.</p>
+              <p className="text-gray-500 text-sm mb-6">Available for immediate product support.</p>
               <a 
                 href="tel:7349049886" 
                 className="block py-3 px-6 bg-[#235347] text-[#DAF1DE] rounded-xl font-bold text-sm hover:bg-black transition-colors"
@@ -68,7 +68,7 @@ const RequestQuote = () => {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h4 className="text-black font-bold text-2xl mb-4">Trusted by Businesses Globally</h4>
           <p className="text-gray-500 max-w-xl mx-auto">
-            Brits Enterprises Limited provides seamless road freight solutions tailored to your professional cargo needs. Join our network of satisfied clients today.
+            Brits Enterprises Limited provides quality interior design and safety clothes solutions tailored to professional needs.
           </p>
         </div>
       </section>
